@@ -1,0 +1,119 @@
+.PlaceorderScreen {
+  height: 100vh;
+  display: flex;
+  padding: 120px 60px 60px 60px;
+
+  color: white;
+  font-size: 35px;
+  justify-content: space-around;
+}
+
+.CartItem_ContainerPlaceOrder {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  height: 220px;
+}
+
+.Cart_Card {
+  display: flex;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.28);
+  width: 300px;
+  height: 100px;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.Cart_Breif {
+  margin-left: 10px;
+}
+
+.CartProduct_Name {
+  font-size: 20px;
+}
+.qty {
+  margin-left: 30px;
+  font-size: 14px;
+}
+
+.price {
+  margin-top: 5px;
+}
+
+.removeItem {
+  margin-left: 95px;
+}
+
+.Shipping {
+  margin-top: 40px;
+}
+.Shipping_Address {
+  font-size: 20px;
+}
+
+.Address_Details {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.Address_Details p {
+  margin-bottom: 5px;
+}
+
+
+.Order_Summary{
+  padding: 0px 40px 40px 40px;
+  border: 1px solid rgb(65, 65, 65);
+  height: 240px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.col1 {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.col2 {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  
+}
+
+.row p {
+  margin-bottom: 5px;
+}
+
+.Order_Summary button {
+  background-color: rgba(255, 255, 255, 0.11);
+  border: 0;
+  height: 20px;
+  width: 100%;
+  color: white;
+  font-weight: 500;
+  margin-top: 30px;
+  cursor: pointer;
+  border: 0;
+  text-decoration: none;
+}
+
+
+
+
+button:focus {
+  outline: 0;
+}
+.Order_Summary button:hover {
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.28);
+}

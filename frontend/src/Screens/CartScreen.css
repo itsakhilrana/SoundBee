@@ -1,0 +1,72 @@
+.CartScreen {
+ 
+ 
+  height: 100vh;
+  padding: 135px;
+  color: white;
+  font-size: 35px;
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+
+
+.CartItem_Container{
+  
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  height: 0;
+  
+ 
+}
+
+.Cart_Card{
+  display: flex;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.28);
+  width: 300px;
+  height: 100px;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.Cart_Breif{
+  margin-left: 10px;
+}
+
+.CartProduct_Name{
+  font-size: 20px;
+}
+.qty{
+  margin-left: 30px;
+  font-size: 14px;
+}
+
+.price{
+  margin-top: 5px;
+}
+
+.removeItem{
+  margin-left: 95px;
+  
+}
+
+.ProceedTo_Checkout{
+  height: 40px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.11);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ProceedTo_Checkout:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+

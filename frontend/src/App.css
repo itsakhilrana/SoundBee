@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  background-color: #202327;
+}
+
+.Modal{
+  background-color:  #202327;
+  position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+   padding: 50px 50px;
+    
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e4e4e493;
+}
+
+.close{
+  float: right;
+  width: 80px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.349);
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Modal_Container{
+  
+  color: white;
+  
+}
+
+.Modal_L{
+  /* background-color: chocolate; */
+  letter-spacing: 1px;
+  display: flex;
+}
+
+.About_Container{
+  width: 500px;
+  margin-top: 10px;
+}
+.About_web{
+  color: rgba(255, 255, 255, 0.651);
+  
+}
+
+.Web_Name {
+  font-size: 92px;
+  font-weight: 700;
+}
+.Modal_M{
+  /* background-color: cyan; */
+  margin-left: 50px;
+  width: 240px;
+}
+
+.Developed{
+  font-size: 30px;
+  
+}
+
+.Developed_List{
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.651);
+}
+
+.Modal_R{
+  /* background-color: darkgoldenrod; */
+  margin-left: 50px;
+  width: 240px;
+}
+
+.In_Development{
+  font-size: 30px;
+}
+
+.In_Development_List{
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.651);
+}
+
+.Tech{
+  margin-top: 20px;
+}
+
+.Tech_Used{
+  font-size: 30px;
+  color: white;
+}
+
+.Tech ul{
+  margin-top: 15px;
+  list-style: none;
+  display: flex;
+}
+
+.Tech li{
+  width: 80px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.349);
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}

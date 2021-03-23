@@ -1,0 +1,53 @@
+.PaymentMethodScreen {
+  
+  
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: white;
+    font-size: 35px;
+    
+  }
+
+.Payment_Container{
+  padding: 40px;
+  border: 1px solid rgb(61, 61, 61);
+ height: 300px;
+}
+
+.Payment_Container form {
+  padding-top: 20px;
+  position: relative;
+}
+
+.Payment_Container label {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.Payment_Container button {
+  position: absolute;
+  right: 0;
+  bottom: 10;
+  background-color: rgba(255, 255, 255, 0.11);
+  border: 0;
+  height: 20px;
+  width: 100%;
+  color: white;
+  font-weight: 500;
+  margin-top: 30px;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+button:focus {
+  outline: 0;
+}
+
+.Payment_Container button:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+

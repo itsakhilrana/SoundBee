@@ -1,0 +1,231 @@
+.HomeScreen {
+  margin-top: 65px;
+  height: 100vh;
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.Product_Container {
+  display: flex;
+}
+
+.Products {
+  width: 690px;
+  color: white;
+  padding-top: 0px;
+}
+
+/* .Products_Scroll{
+    margin-top: 30px;
+    display: inline-block;
+    width: 1000px;
+} */
+
+.Products_Scroll {
+  width: 800px;
+}
+
+.Scroll_container {
+  overflow: hidden;
+  height: 250px;
+  display: flex;
+ 
+}
+
+/* .row {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+}
+
+.Products_Scroll2 {
+  overflow: auto;
+  white-space: nowrap;
+  margin-top: 30px;
+  width: 800px;
+} */
+
+.Link_Card {
+  text-decoration: none;
+  color: white;
+}
+
+.Card {
+  height: 200px;
+  width: 140px;
+  background-color: rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+  padding: 10px 10px;
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.Card_Img img {
+  width: 120px;
+  height: 100px;
+
+  border-radius: 5px;
+}
+
+.Product_Title {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  margin-top: 10px;
+}
+
+.Product_Brief {
+  font-size: 12px;
+  color: white;
+
+  margin-top: 5px;
+}
+
+.Explore_btn {
+  display: flex;
+  width: 80px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.Card2 {
+  height: 125px;
+  width: 265px;
+  background-color: rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+  padding: 10px 10px;
+  display: flex;
+  margin-right: 40px;
+}
+
+.Card_Img2 img {
+  width: 90px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.Product_Details {
+  margin-left: 10px;
+}
+
+.Product_Title2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.Product_Brief2 {
+  font-size: 12px;
+  color: white;
+
+  margin-top: 4px;
+}
+
+.Rating {
+  margin-left: 10px;
+
+  font-size: 14px;
+  font-weight: 200;
+}
+.Price {
+  margin-top: 0px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 90px;
+}
+
+.Btn_Add {
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 10px;
+  width: 80px;
+  margin-left: 60px;
+  margin-top: 5px;
+  height: 25px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Premium_Products {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background-color: #202327;
+  color: white;
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.25);
+  margin-left: 70px;
+  width: 300px;
+  height: 100vh;
+}
+
+.Premium_Card {
+  padding: 0px;
+  width: 100%;
+}
+
+.Premium_CardImg img {
+  height: 220px;
+  width: 100%;
+}
+
+.Details {
+  margin-top: 40px;
+  color: white;
+}
+.Premium_Price {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 200;
+
+  float: right;
+}
+
+.Premium_Title {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.Premium_Brief {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 200;
+}
+
+.Premium_Btn {
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+
+  margin-top: 30px;
+}
+
+.Ads {
+  padding-top: 20px;
+  padding-left: 10px;
+  width: 180px;
+}
+.Ads_Container p {
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.377);
+  font-size: 50px;
+  font-weight: 700;
+}
