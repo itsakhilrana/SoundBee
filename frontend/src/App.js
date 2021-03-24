@@ -13,6 +13,7 @@ import AddressScreen from './Screens/AdressScreen'
 import PaymentMethodScreen from './Screens/PaymentMethodScreen'
 import PlaceorderScreen from './Screens/PlaceorderScreen'
 import { OrderScreen } from './Screens/OrderScreen'
+import MyOrderScreen from './Screens/MyOrderScreen'
 
 Modal.setAppElement('#root')
 function App() {
@@ -158,7 +159,8 @@ function App() {
           <Route path="/address" component={AddressScreen}></Route> 
           <Route path="/paymentmethod" component={PaymentMethodScreen}></Route> 
           <Route path="/placeorder" component={PlaceorderScreen}></Route> 
-          <Route path="/order/:id" component={OrderScreen}></Route>  
+          <Route path="/order/:id" component={OrderScreen}></Route> 
+          <Route path="/myorders" component={MyOrderScreen}></Route>   
         </Switch>
       </div>
     </Router>

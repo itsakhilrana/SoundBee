@@ -128,8 +128,8 @@ const PlaceorderScreen = ({history}) => {
           </div>
         </div>
       </div>
-      <div className="Order_Summary">
-        <p>Order Summary</p>
+      <div className="Cart_Summary">
+        <p className="Cart_Summar">Cart Summary</p>
         <div className="row">
           <div className="col1">
             <p>Item price</p>

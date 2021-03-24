@@ -19,7 +19,7 @@ const CartScreen = ({ history, match, location }) => {
   const dispatch = useDispatch()
 
   const removeItemHandler = (id) => {
-    dispatch(cartRemoveItem())
+    dispatch(cartRemoveItem(id))
   }
 
   

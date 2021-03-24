@@ -1,7 +1,7 @@
 .OrderScreen {
     height: 100vh;
     display: flex;
-    padding: 120px 60px 60px 60px;
+    padding: 100px 60px 60px 60px;
   
     color: white;
     font-size: 35px;
@@ -62,15 +62,19 @@
   
   
   .Order_Summary{
-    padding: 0px 40px 40px 40px;
+    padding: 10px 40px 40px 40px;
     border: 1px solid rgb(65, 65, 65);
-    height: 300px;
+    height: 340px;
   }
-  
+
+  .Place_Order{
+    font-size: 24px;
+   font-weight: 500;
+  }
   .row {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+    margin-top: 20px;
   }
   
   .col1 {
@@ -114,4 +118,34 @@
   .Order_Summary button:hover {
     background: transparent;
     background-color: rgba(255, 255, 255, 0.28);
+  }
+
+
+  .isPaidGreen{
+   
+    background-color: rgb(115, 168, 45);
+    color: white;
+   display: flex;
+   padding: 2px;
+   align-items: center;
+   justify-content: center;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .isPaidRed{
+    background-color: rgb(248, 48, 34);
+    color: white;
+   display: flex;
+   padding: 2px;
+   align-items: center;
+   justify-content: center;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .PayPal_Btn{
+    margin-top: 30px;
   }

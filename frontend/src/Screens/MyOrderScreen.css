@@ -1,0 +1,33 @@
+.MyOrder_Screen{
+    
+    height: 100vh;
+    display: flex;
+    padding: 100px 60px 60px 60px;
+  
+    color: white;
+   
+    justify-content: space-around;
+}
+
+
+table, th, td {
+    border: 1px solid rgb(70, 70, 70);
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+  }
+  th {
+    text-align: left;
+    font-weight: 500;
+  }
+  td {
+      text-align: center;
+      font-size: 12px;
+  }
+
+  caption {
+      margin-bottom: 30px;
+      font-size: 25px;
+      font-weight: 500;
+  }

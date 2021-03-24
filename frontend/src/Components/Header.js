@@ -18,7 +18,9 @@ const Header = () => {
     <header>
       <div className="Navbar">
         <div className="Navbar_L">
-          <Link to='/' className="Title">SoundBee</Link>
+          <Link to="/" className="Title">
+            SoundBee
+          </Link>
         </div>
         <div className="Navbar_R">
           <ul>
@@ -30,7 +32,29 @@ const Header = () => {
                     Cart
                   </Link>
                 </li>
-                <li onClick={logoutHandler}>Logout</li>
+               
+                <li>
+                  <div className="dropdown">
+                    <button className="dropbtn">
+                      {userInfo.name}
+                      <i className="fa fa-caret-down"></i>
+                    </button>
+                    <div className="dropdown-content">
+                      <li>
+                        <Link className="Links" to="/myorders">
+                          My Orders
+                        </Link>
+                      </li>
+                     
+
+                      <li>
+                        <Link className="Links" onClick={logoutHandler}>
+                          Logout
+                        </Link>
+                      </li>
+                    </div>
+                  </div>
+                </li>
               </>
             ) : (
               <>
@@ -44,8 +68,6 @@ const Header = () => {
                     Login
                   </Link>
                 </li>
-                
-                
               </>
             )}
 
@@ -58,17 +80,19 @@ const Header = () => {
                 <div className="Search_Btn">Search</div>
               </div>
             </li> */}
-            <li><p>
-                    <i
-                      style={{
-                        fontSize: '8px',
-                        marginRight: '10px',
-                        color: 'red',
-                      }}
-                      className="fas fa-circle"
-                    ></i>
-                    In Development
-                  </p></li>
+            <li>
+              <p>
+                <i
+                  style={{
+                    fontSize: '8px',
+                    marginRight: '10px',
+                    color: 'red',
+                  }}
+                  className="fas fa-circle"
+                ></i>
+                In Development
+              </p>
+            </li>
           </ul>
         </div>
 

@@ -1,31 +1,53 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { orderDetailAction } from '../actions/orderAction'
+import { orderDetailAction , payOrderAction} from '../actions/orderAction'
+
+import {PayPalButton} from 'react-paypal-button-v2'
 
 import './OrderScreen.css'
 
 export const OrderScreen = ({ history, match }) => {
+
+  const orderId = match.params.id
+  const [sdkReady, setSdkReady] = useState(false)
+  
   const orderDetails = useSelector((state) => state.orderDetails)
-  const { order, loading, error, success } = orderDetails
-  //   const {
-  //     shippingAddress,
-  //     user,
-  //     cartItems: orderItems,
-  //     _id: orderId,
-  //     paymentMethod,
-  //     itemsPrice,
-  //     shippingPrice,
-  //     taxPrice,
-  //     totalPrice,
-  //   } = order
+  const { order, loading, error } = orderDetails
+  
+  const payOrder = useSelector((state) => state.payOrder)
+  const { loading: loadingPay, paySuccess} = payOrder
+
 
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(orderDetailAction(match.params.id))
-  }, [history])
 
-  const paymentHandler = () => {}
+
+     const addPayPAlScript = async () =>{
+      // const {data: clientId} = await axios.get("/api/config/paypal")
+      const script = document.createElement('script')
+      script.type = 'text/javascript'
+      script.src = `https://www.paypal.com/sdk/js?client-id=AckYcnhBldgZthmmDTM1auclZa56tbz0z6mG11frncAFPLAv3wa28yIXVKB48r0fGS9JV7D2L0iNLPak`
+      script.async = true
+      script.onload = () => {
+        setSdkReady(true)
+      }
+      document.body.appendChild(script)
+    }
+
+    if (!window.paypal) {
+      addPayPAlScript()
+    } else {
+      setSdkReady(true)
+    }
+
+    dispatch(orderDetailAction(match.params.id))
+  }, [history, paySuccess, dispatch, orderId])
+
+  const paymentHandler = (paymentResult) => {
+
+    dispatch(payOrderAction(match.params.id, paymentResult))
+  }
   return (
     <div>
       <div className="OrderScreen">
@@ -75,7 +97,7 @@ export const OrderScreen = ({ history, match }) => {
               </div>
             </div>
             <div className="Order_Summary">
-              <p>Placed Order Summary</p>
+              <p className="Place_Order">Order Summary</p>
               <div className="row">
                 <div className="col1">
                   <p>OrderId</p>
@@ -85,8 +107,11 @@ export const OrderScreen = ({ history, match }) => {
                   <p>Shipping price</p>
                   <p>Tax price</p>
                   <p>Total price</p>
+                  
                   <br></br>
                   <p>PaymentMethod</p>
+                  <p>Payment Status</p>
+                  <p>Delivery Status</p>
                 </div>
                 <div className="col2">
                 <p>{order._id}</p>
@@ -98,9 +123,23 @@ export const OrderScreen = ({ history, match }) => {
                   <p>${order.totalPrice}</p>
                   <br></br>
                   <p>{order.paymentMethod}</p>
+                  {order.isPaid ? <p className="isPaidGreen">Paid</p> : <p className="isPaidRed">Not Paid</p>}
+                  {order.isDeliver ? <p className="isPaidGreen">Dilvered</p> : <p className="isPaidRed">Not Delivered</p>}
                 </div>
               </div>
-              <button onClick={paymentHandler}>Make Payment</button>
+              {!order.isPaid && ( // it will only excute when we have pendind payment of order
+                <div className="PayPal_Btn">
+                  {loadingPay && <p>Loading Payment Result</p>}
+                  {!sdkReady ? (
+                    <p>Loading Paypal Payment Method</p>
+                  ) : (
+                    <PayPalButton
+                      amount={order.totalPrice}
+                      onSuccess={paymentHandler}
+                    />
+                  )}
+                </div>
+              )}
             </div>
           </>
         )}
