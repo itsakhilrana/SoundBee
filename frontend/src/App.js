@@ -70,7 +70,7 @@ function App() {
                       }}
                       className="fas fa-circle"
                     ></i>
-                    Product Listing
+                    Product listing
                   </p>
                   <p>
                     <i
@@ -81,7 +81,7 @@ function App() {
                       }}
                       className="fas fa-circle"
                     ></i>
-                    Login Feature
+                    Login feature
                   </p>
                   <p>
                     <i
@@ -92,7 +92,29 @@ function App() {
                       }}
                       className="fas fa-circle"
                     ></i>
-                    Signup Feature
+                    Signup feature
+                  </p>
+                  <p>
+                    <i
+                      style={{
+                        fontSize: '8px',
+                        marginRight: '10px',
+                        color: 'greenyellow',
+                      }}
+                      className="fas fa-circle"
+                    ></i>
+                    Order feature
+                  </p>
+                  <p>
+                    <i
+                      style={{
+                        fontSize: '8px',
+                        marginRight: '10px',
+                        color: 'greenyellow',
+                      }}
+                      className="fas fa-circle"
+                    ></i>
+                    Payment gateway
                   </p>
                 </div>
               </div>
@@ -110,6 +132,8 @@ function App() {
                     ></i>
                     Non-responsive
                   </p>
+                  
+                 
                   <p>
                     <i
                       style={{
@@ -119,7 +143,7 @@ function App() {
                       }}
                       className="fas fa-circle"
                     ></i>
-                    Order Feature
+                    Admin panel
                   </p>
                   <p>
                     <i
@@ -130,7 +154,7 @@ function App() {
                       }}
                       className="fas fa-circle"
                     ></i>
-                    Payment Gateway
+                    Error handling
                   </p>
                   <p>
                     <i
@@ -141,7 +165,7 @@ function App() {
                       }}
                       className="fas fa-circle"
                     ></i>
-                    Admin Panel
+                    Testing
                   </p>
                 </div>
               </div>

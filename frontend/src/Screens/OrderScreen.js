@@ -71,14 +71,25 @@ export const OrderScreen = ({ history, match }) => {
                           ></img>
                         </div>
                         <div className="orderCart_Breif">
-                          <p className="orderProduct_Name">
-                            {product.name}{' '}
+                          <p className="orderCartProduct_Name">
+                            {product.name}
                             <span className="orderQty">Qty {product.qty}</span>
                           </p>
 
                           <p className="orderProduct">{product.description} </p>
 
-                          <p className="orderPrice">${product.price} </p>
+                          <p className="orderPrice"><span className="Price">
+                            <span
+                              style={{
+                                fontSize: '14px',
+                                fontWeight: '200',
+                                marginRight: '3px',
+                              }}
+                            >
+                              $
+                            </span>
+                            {product.price}
+                          </span> </p>
                         </div>
                       </div>
                     </>

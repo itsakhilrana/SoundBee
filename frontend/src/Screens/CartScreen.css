@@ -1,72 +1,85 @@
 .CartScreen {
- 
- 
   height: 100vh;
   padding: 135px;
   color: white;
   font-size: 35px;
   display: flex;
   justify-content: space-evenly;
- 
 }
 
-
-.CartItem_Container{
-  
+.CartItem_Container {
   display: grid;
   grid-template-columns: auto auto;
   grid-row-gap: 20px;
   grid-column-gap: 20px;
   height: 0;
-  
- 
 }
 
-.Cart_Card{
+.Cart_Card {
   display: flex;
   font-size: 14px;
-  background-color: rgba(255, 255, 255, 0.28);
-  width: 300px;
-  height: 100px;
+  background-color: rgba(255, 255, 255, 0.048);
+  width: 290px;
+  height: 105px;
   padding: 14px;
   border-radius: 10px;
 }
 
-.Cart_Breif{
+.Cart_Breif {
   margin-left: 10px;
 }
 
-.CartProduct_Name{
-  font-size: 20px;
+.CartProduct_Name {
+  font-size: 15px;
+  font-weight: 500;
 }
-.qty{
-  margin-left: 30px;
+.qty {
+  margin-left: 60px;
   font-size: 14px;
 }
 
-.price{
+.About_Product {
+  font-size: 10px;
+  letter-spacing: 0.6px;
   margin-top: 5px;
 }
 
-.removeItem{
-  margin-left: 95px;
-  
+.price {
+  margin-top: 5px;
 }
 
-.ProceedTo_Checkout{
-  height: 40px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.11);
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  font-size: 20px;
+.removeItem {
+  margin-left: 100px;
+  font-size: 12px;
   font-weight: 500;
+  border-radius: 10px;
+  width: 80px;
+
+  background-color: rgba(255, 255, 255, 0.548);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.removeItem:hover {
+  background-color: rgba(255, 255, 255, 0.959);
+}
+
+.ProceedTo_Checkout {
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.089);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
   cursor: pointer;
 }
 
 .ProceedTo_Checkout:hover {
-  background-color: rgba(255, 255, 255, 0.28);
+  background-color: rgba(255, 255, 255, 0.404);
 }
-
-

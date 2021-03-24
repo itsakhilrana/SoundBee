@@ -1,6 +1,6 @@
 .HomeScreen {
   margin-top: 65px;
-  height: 100vh;
+ height: 100vh;
   padding-top: 0px;
   padding-left: 20px;
   padding-right: 20px;
@@ -24,6 +24,7 @@
 
 .Products_Scroll {
   width: 800px;
+  margin-top: 30px;
 }
 
 .Scroll_container {
@@ -53,12 +54,12 @@
 }
 
 .Card {
-  height: 200px;
-  width: 140px;
-  background-color: rgba(255, 255, 255, 0.28);
+  height: 205px;
+  width: 150px;
+  background-color: rgba(255, 255, 255, 0.048);
   border-radius: 10px;
   padding: 10px 10px;
-  display: inline-block;
+ 
   margin-right: 40px;
 }
 
@@ -70,17 +71,18 @@
 }
 
 .Product_Title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   color: white;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .Product_Brief {
-  font-size: 12px;
+  font-size: 10px;
   color: white;
-
-  margin-top: 5px;
+  letter-spacing: .6px;
+  margin-top: 2px;
+  margin-bottom: 5px;
 }
 
 .Explore_btn {
@@ -89,19 +91,23 @@
   height: 25px;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.548);
   color: black;
   font-size: 12px;
   font-weight: 500;
   border-radius: 10px;
   margin-left: 20px;
-  margin-top: 15px;
+  margin-top: 10px;
+}
+
+.Explore_btn:hover{
+  background-color: rgba(255, 255, 255, 0.959);
 }
 
 .Card2 {
-  height: 125px;
-  width: 265px;
-  background-color: rgba(255, 255, 255, 0.28);
+  height: 120px;
+  width: 245px;
+  background-color: rgba(255, 255, 255, 0.048);
   border-radius: 10px;
   padding: 10px 10px;
   display: flex;
@@ -111,7 +117,7 @@
 .Card_Img2 img {
   width: 90px;
   height: 100px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .Product_Details {
@@ -119,29 +125,31 @@
 }
 
 .Product_Title2 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: white;
 }
 
 .Product_Brief2 {
-  font-size: 12px;
+  font-size: 10px;
   color: white;
 
-  margin-top: 4px;
+  margin-top: 2px;
+  letter-spacing: .6px;
+  margin-bottom: 10px;
 }
 
 .Rating {
-  margin-left: 10px;
+  margin-left: 5px;
 
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 10px;
+  font-weight: 500;
 }
 .Price {
   margin-top: 0px;
   font-size: 16px;
   font-weight: 500;
-  margin-left: 90px;
+  margin-left: 0px;
 }
 
 .Btn_Add {
@@ -149,14 +157,18 @@
   font-weight: 500;
   border-radius: 10px;
   width: 80px;
-  margin-left: 60px;
+  margin-left: 45px;
   margin-top: 5px;
   height: 25px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.548);
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Btn_Add:hover{
+  background-color: rgba(255, 255, 255, 0.959);
 }
 
 .Premium_Products {
@@ -180,6 +192,7 @@
 .Premium_CardImg img {
   height: 220px;
   width: 100%;
+  border-radius: 5px;
 }
 
 .Details {
@@ -196,7 +209,7 @@
 
 .Premium_Title {
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .Premium_Brief {
@@ -207,7 +220,7 @@
 
 .Premium_Btn {
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.28);
+  background-color: rgba(255, 255, 255, 0.089);
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -216,6 +229,11 @@
   font-weight: 500;
 
   margin-top: 30px;
+}
+
+.Premium_Btn:hover{
+  background-color: rgba(255, 255, 255, 0.219);
+  
 }
 
 .Ads {

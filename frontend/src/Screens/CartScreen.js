@@ -38,7 +38,7 @@ const CartScreen = ({ history, match, location }) => {
                   </div>
                   <div className="Cart_Breif">
                     <p className="CartProduct_Name">
-                      {product.name}{' '}
+                      {product.name}
                       <span className="qty">
                         <select
                           value={product.qty}
@@ -62,7 +62,18 @@ const CartScreen = ({ history, match, location }) => {
                     <p className="About_Product">{product.description} </p>
 
                     <p className="price">
-                      ${product.price}{' '}
+                    <span className="Price">
+                            <span
+                              style={{
+                                fontSize: '14px',
+                                fontWeight: '200',
+                                marginRight: '3px',
+                              }}
+                            >
+                              $
+                            </span>
+                            {product.price}
+                          </span>
                       <span className="removeItem" onClick={()=> removeItemHandler(product.product)}>Remove</span>
                     </p>
                   </div>

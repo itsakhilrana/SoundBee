@@ -38,7 +38,7 @@ const HomeScreens = () => {
         <div className="HomeScreen_Container">
           <div className="Product_Container">
             <div className="Products">
-              {userInfo ? (
+              {/* {userInfo ? (
                 <p
                   style={{
                     fontSize: '18px',
@@ -50,10 +50,10 @@ const HomeScreens = () => {
                 </p>
               ) : (
                 ''
-              )}
+              )} */}
 
               <div className="Products_Scroll">
-                <p style={{ fontSize: '18px', marginBottom: '20px' }}>
+                <p style={{ fontSize: '14px', marginBottom: '20px', letterSpacing:"1px" }}>
                   Today Deal's
                 </p>
                 <ScrollContainer className="Scroll_container">
@@ -75,12 +75,37 @@ const HomeScreens = () => {
                         className="Link_Card"
                         to={`/product/${product._id}`}
                       >
-                        <p className="Product_Title">{product.name}</p>
+                        <p className="Product_Title">
+                          {product.name}
+                          <span className="Rating">
+                            {product.rating}
+                            <i
+                              style={{
+                                color: 'yellow',
+                                marginLeft: '4px',
+                                fontSize: '10px',
+                              }}
+                              className="fas fa-star"
+                            ></i>
+                          </span>
+                        </p>
                       </Link>
                       <div className="Product_Brief">
                         <p>{product.description}</p>
                         {/* <p>In Stocks- {product.countInStock}</p> */}
                       </div>
+                      <span className="Price">
+                        <span
+                          style={{
+                            fontSize: '14px',
+                            fontWeight: '200',
+                            marginRight: '3px',
+                          }}
+                        >
+                          $
+                        </span>
+                        {product.price}
+                      </span>
                       <Link
                         className="Link_Card"
                         to={`/product/${product._id}`}
@@ -92,7 +117,7 @@ const HomeScreens = () => {
                 </ScrollContainer>
               </div>
               <div className="Products_Scroll">
-                <p style={{ fontSize: '18px', marginBottom: '20px' }}>
+                <p style={{ fontSize: '14px', marginBottom: '20px', letterSpacing:"1px" }}>
                   Best Seller's
                 </p>
                 <ScrollContainer className="Scroll_container">
@@ -120,7 +145,11 @@ const HomeScreens = () => {
                             <span className="Rating">
                               {product.rating}
                               <i
-                                style={{ color: 'yellow' }}
+                                style={{
+                                  color: 'yellow',
+                                  marginLeft: '4px',
+                                  fontSize: '8px',
+                                }}
                                 className="fas fa-star"
                               ></i>
                             </span>
@@ -129,7 +158,7 @@ const HomeScreens = () => {
 
                         <div className="Product_Brief2">
                           <p>{product.description}</p>
-                          <p>In Stocks- {product.countInStock}</p>
+                          {/* <p>In Stocks- {product.countInStock}</p> */}
                         </div>
                         <div className="Price_Rating">
                           <span className="Price">
@@ -161,7 +190,7 @@ const HomeScreens = () => {
               </div>
             </div>
             <div className="Premium_Products">
-              <p style={{ fontSize: '18px', marginBottom: '20px' }}>
+              <p style={{ fontSize: '14px', marginBottom: '20px' , letterSpacing:"1px"}}>
                 Top Pick's
               </p>
               {TopPick.map((product) => (
@@ -191,7 +220,11 @@ const HomeScreens = () => {
                         <span className="Rating">
                           {product.rating}
                           <i
-                            style={{ color: 'yellow' }}
+                            style={{
+                              color: 'yellow',
+                              marginLeft: '4px',
+                              fontSize: '12px',
+                            }}
                             className="fas fa-star"
                           ></i>
                         </span>

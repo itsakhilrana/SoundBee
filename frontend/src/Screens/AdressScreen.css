@@ -1,51 +1,60 @@
 .AddressScreen {
-    /* margin-top: 65px; */
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 35px;
-    
-  }
+  /* margin-top: 65px; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 35px;
+}
 
-
-  .AddressScreen form {
-    
-    width: 400px;
-    margin: 0 auto;
-  }
+.AddressScreen form {
+  width: 400px;
+  margin: 0 auto;
+}
 
 .AddressScreen input {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid white;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  
- .AddressScreen label {
-    line-height: 2;
-    text-align: left;
-    display: block;
-    margin-bottom: 13px;
-    margin-top: 20px;
-    color: white;
-    font-size: 14px;
-    font-weight: 200;
-  }
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 0;
+  color: white;
+  letter-spacing: 0.6px;
+  font-size: 12px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
 
-  .AddressScreen button {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid white;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  
+  background-color: rgba(255, 255, 255, 0.089);
+}
+
+.AddressScreen label {
+  line-height: 2;
+  text-align: left;
+  display: block;
+  margin-bottom: 13px;
+  margin-top: 20px;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 0.6px;
+
+  font-weight: 500;
+}
+
+.AddressScreen button {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 0;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.411);
+  cursor: pointer;
+}
+
+.AddressScreen button:hover {
+  background-color: rgba(255, 255, 255, 0.959);
+}

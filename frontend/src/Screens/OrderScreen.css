@@ -19,7 +19,7 @@
   .orderCart_Card {
     display: flex;
     font-size: 14px;
-    background-color: rgba(255, 255, 255, 0.28);
+   background-color: rgba(255, 255, 255, 0.048);
     width: 300px;
     height: 100px;
     padding: 14px;
@@ -31,11 +31,18 @@
   }
   
   .orderCartProduct_Name {
-    font-size: 20px;
+    font-size: 14px;
+    font-weight: 500;
   }
   .orderQty {
-    margin-left: 30px;
-    font-size: 14px;
+    margin-left: 70px;
+    font-size: 12px;
+  }
+
+  .orderProduct{
+    font-size: 10px;
+  letter-spacing: 0.6px;
+  margin-top: 5px;
   }
   
   .orderPrice {
