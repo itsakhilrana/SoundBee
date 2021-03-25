@@ -15,14 +15,26 @@ const products = [
       "name": "SoundBee S1",
       "image": "/images/hp2.jpg",
       "description": "Built-in microphone.",
+      "description2": "Music delivered straight from the studio to your ears. These wireless earphones will change the way you listen to music forver. A great battery, stylish design and much more make these a true steal of a deal!",
+      'keypoints': {
+        'a':'Bluetooth 5.0 Connectivity',
+        'b':'High-Definition Sound Quality',
+        'c':'Soft and Comfortable fit'
+      },
       "brand": "SoundBee",
+     
      
   },
   {
       "price": 59.99,
       "rating": 4.5,
       "countInStock": 10,
-      
+      "description2": "Music delivered straight from the studio to your ears. These wireless earphones will change the way you listen to music forver. A great battery, stylish design and much more make these a true steal of a deal!",
+      'keypoints': {
+        'a':'Bluetooth 5.0 Connectivity',
+        'b':'High-Definition Sound Quality',
+        'c':'Soft and Comfortable fit'
+      },
       "name": "SoundBee S2",
       "image": "/images/hp1.jpg",
       "description": "Long battery life",
@@ -33,7 +45,12 @@ const products = [
       "price": 99.99,
       "rating": 3.5,
       "countInStock": 5,
-      
+      "description2": "Music delivered straight from the studio to your ears. These wireless earphones will change the way you listen to music forver. A great battery, stylish design and much more make these a true steal of a deal!",
+      'keypoints': {
+        'a':'Bluetooth 5.0 Connectivity',
+        'b':'High-Definition Sound Quality',
+        'c':'Soft and Comfortable fit'
+      },
       "name": "SoundBee S3",
       "image": "/images/hp9.jpg",
       "description": "An intuitive design",
@@ -44,7 +61,12 @@ const products = [
       "price": 39.99,
       "rating": 4.5,
       "countInStock": 10,
-      
+      "description2": "Music delivered straight from the studio to your ears. These wireless earphones will change the way you listen to music forver. A great battery, stylish design and much more make these a true steal of a deal!",
+      'keypoints': {
+        'a':'Bluetooth 5.0 Connectivity',
+        'b':'High-Definition Sound Quality',
+        'c':'Soft and Comfortable fit'
+      },
       "name": "SoundBee S4",
       "image": "/images/hp4.jpg",
       "description": "High bass configration",
@@ -55,7 +77,12 @@ const products = [
       "price": 49.99,
       "rating": 3.5,
       "countInStock": 7,
-      
+      "description2": "Music delivered straight from the studio to your ears. These wireless earphones will change the way you listen to music forver. A great battery, stylish design and much more make these a true steal of a deal!",
+      'keypoints': {
+        'a':'Bluetooth 5.0 Connectivity',
+        'b':'High-Definition Sound Quality',
+        'c':'Soft and Comfortable fit'
+      },
       "name": "SoundBee S5",
       "image": "/images/hp5.jpg",
       "description": "Smooth playing dot",
@@ -66,7 +93,12 @@ const products = [
       "price": 29.99,
       "rating": 4.0,
       "countInStock": 0,
-      
+      "description2": "Music delivered straight from the studio to your ears. These wireless earphones will change the way you listen to music forver. A great battery, stylish design and much more make these a true steal of a deal!",
+      'keypoints': {
+        'a':'Bluetooth 5.0 Connectivity',
+        'b':'High-Definition Sound Quality',
+        'c':'Soft and Comfortable fit'
+      },
       "name": "SoundBee S6",
       "image": "/images/hp6.jpg",
       "description": "Meet Echo Dot",
@@ -77,7 +109,12 @@ const products = [
       "price": 29.99,
       "rating": 3.5,
       "countInStock": 0,
-     
+      "description2": "Music delivered straight from the studio to your ears. These wireless earphones will change the way you listen to music forver. A great battery, stylish design and much more make these a true steal of a deal!",
+      'keypoints': {
+        'a':'Bluetooth 5.0 Connectivity',
+        'b':'High-Definition Sound Quality',
+        'c':'Soft and Comfortable fit'
+      },
       "name": "SoundBee S7",
       "image": "/images/hp7.jpg",
       "description": "Speaker with fabric",
@@ -89,7 +126,12 @@ const products = [
       "price": 29.99,
       "rating": 4.5,
       "countInStock": 0,
-     
+      "description2": "Music delivered straight from the studio to your ears. These wireless earphones will change the way you listen to music forver. A great battery, stylish design and much more make these a true steal of a deal!",
+      'keypoints': {
+        'a':'Bluetooth 5.0 Connectivity',
+        'b':'High-Definition Sound Quality',
+        'c':'Soft and Comfortable fit'
+      },
       "name": "SoundBee S8",
       "image": "/images/hp8.jpg",
       "description": "Compact small space",
@@ -100,7 +142,12 @@ const products = [
       "price": 29.99,
       "rating": 5.0,
       "countInStock": 0,
-    
+      "description2": "Music delivered straight from the studio to your ears. These wireless earphones will change the way you listen to music forver. A great battery, stylish design and much more make these a true steal of a deal!",
+      'keypoints': {
+        'a':'Bluetooth 5.0 Connectivity',
+        'b':'High-Definition Sound Quality',
+        'c':'Soft and Comfortable fit'
+      },
       "name": "SoundBee S9",
       "image": "/images/hp3.jpg",
       "description": "Stunning design fabric",

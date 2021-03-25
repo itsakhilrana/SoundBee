@@ -48,18 +48,26 @@ const ProductScreen = ({ history, match }) => {
                 <p className="Product_Description">{product.description}</p>
                 <div className="Product_SubDetails">
                   <p>
+                    {product.rating}{' '}
                     <i style={{ color: 'yellow' }} className="fas fa-star"></i>
-                    <i style={{ color: 'yellow' }} className="fas fa-star"></i>
-                    <i style={{ color: 'yellow' }} className="fas fa-star"></i>
-                    <i
-                      style={{ color: 'yellow' }}
-                      className="fas fa-star"
-                    ></i>{' '}
-                    {product.rating}
                   </p>
 
                   <p>
-                    {product.countInStock > 0 ? 'In Stock' : 'Out Of Stock'}
+                    {product.countInStock > 0 ? (
+                      <p
+                        className="InStock"
+                        style={{ color: 'rgb(142, 233, 56)' }}
+                      >
+                        In Stock
+                      </p>
+                    ) : (
+                      <p
+                        className="OutofStock"
+                        style={{ color: 'rgb(252, 38, 38)' }}
+                      >
+                        Out Of Stock
+                      </p>
+                    )}
                   </p>
 
                   {product.countInStock > 0 && (
@@ -87,36 +95,38 @@ const ProductScreen = ({ history, match }) => {
                     </span>
                   </p>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adip iscing elit,
-                    sed do eiusmod tem por incidi dunt ut labore et dolore magna
-                    ali qua. Ut enim ad minim veniam, quis nost rud reqtyr
-                    revder
+                   {product.description2}
+                  </p>
+                  <p>
+                  <i
+                      style={{ color: 'white', marginRight: '10px' }}
+                      className="fas fa-check"
+                    ></i>
+                   
+                   {  product.keypoints && <span>{product.keypoints.a}</span>}
                   </p>
                   <p>
                     <i
                       style={{ color: 'white', marginRight: '10px' }}
                       className="fas fa-check"
                     ></i>
-                    Ut enim ad minim veniam, quis nost rud
+                   {  product.keypoints && <span>{product.keypoints.b}</span>}
                   </p>
                   <p>
                     <i
                       style={{ color: 'white', marginRight: '10px' }}
                       className="fas fa-check"
                     ></i>
-                    Ut enim ad minim veniam, quis nost rud
-                  </p>
-                  <p>
-                    <i
-                      style={{ color: 'white', marginRight: '10px' }}
-                      className="fas fa-check"
-                    ></i>
-                    Ut enim ad minim veniam, quis nost rud
+                      {  product.keypoints && <span>{product.keypoints.c}</span>}
                   </p>
                   <div className="Product_SubDetails">
                     {/* <p>Price: {product.price}</p>
               <p>In Stock: {product.countInStock}</p> */}
-                    <button className="AddToCart_btn" onClick={addToCartHandler} disabled={product.countInStock === 0} >
+                    <button
+                      className="AddToCart_btn"
+                      onClick={addToCartHandler}
+                      disabled={product.countInStock === 0}
+                    >
                       Add To Cart
                     </button>
                   </div>

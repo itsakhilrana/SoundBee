@@ -14,7 +14,7 @@ const CartScreen = ({ history, match, location }) => {
 
   const { cartItems } = cart
   console.log(cart)
-  console.log("Render again")
+  console.log('Render again')
 
   const dispatch = useDispatch()
 
@@ -22,47 +22,54 @@ const CartScreen = ({ history, match, location }) => {
     dispatch(cartRemoveItem(id))
   }
 
-  
   return (
     <div className="CartScreen">
-      <div className="CartItem_Container">
+      <div className="CartScreen_Contianer">
         {cartItems.length === 0 ? (
-          <p>No item</p>
+          'No item in your cart.'
         ) : (
-          cartItems.map((product) => {
-            return (
-              <>
-                <div className="Cart_Card" key={product.product}>
+          <div className="Flex">
+            <div className="CartItem_Container">
+              {cartItems.map((product) => {
+                return (
                   <div>
-                    <img src={product.image} width="70px" height="70px"></img>
-                  </div>
-                  <div className="Cart_Breif">
-                    <p className="CartProduct_Name">
-                      {product.name}
-                      <span className="qty">
-                        <select
-                          value={product.qty}
-                          onChange={(e) => {
-                            dispatch(
-                              cartAddItem(
-                                product.product,
-                                Number(e.target.value)
-                              )
-                            )
-                          }}
-                        >
-                          {[...Array(product.countInStock).keys()].map((x) => (
-                            <option key={x + 1} value={x + 1}>
-                              {x + 1}
-                            </option>
-                          ))}
-                        </select>
-                      </span>
-                    </p>
-                    <p className="About_Product">{product.description} </p>
+                    <div className="Cart_Card" key={product.product}>
+                      <div>
+                        <img
+                          src={product.image}
+                          width="70px"
+                          height="70px"
+                        ></img>
+                      </div>
+                      <div className="Cart_Breif">
+                        <p className="CartProduct_Name">
+                          {product.name}
+                          <span className="qty">
+                            <select
+                              value={product.qty}
+                              onChange={(e) => {
+                                dispatch(
+                                  cartAddItem(
+                                    product.product,
+                                    Number(e.target.value)
+                                  )
+                                )
+                              }}
+                            >
+                              {[...Array(product.countInStock).keys()].map(
+                                (x) => (
+                                  <option key={x + 1} value={x + 1}>
+                                    {x + 1}
+                                  </option>
+                                )
+                              )}
+                            </select>
+                          </span>
+                        </p>
+                        <p className="About_Product">{product.description} </p>
 
-                    <p className="price">
-                    <span className="Price">
+                        <p className="price">
+                          <span className="Price">
                             <span
                               style={{
                                 fontSize: '14px',
@@ -74,22 +81,30 @@ const CartScreen = ({ history, match, location }) => {
                             </span>
                             {product.price}
                           </span>
-                      <span className="removeItem" onClick={()=> removeItemHandler(product.product)}>Remove</span>
-                    </p>
+                          <span
+                            className="removeItem"
+                            onClick={() => removeItemHandler(product.product)}
+                          >
+                            Remove
+                          </span>
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </>
-            )
-          })
-        )}
-      </div>
+                )
+              })}
+            </div>
 
-      <div className="ProceedTo_Checkout"
-        onClick={() => {
-          history.push('/address')
-        }}
-      >
-        <p>Proceed To CheckOut</p>
+            <div
+              className="ProceedTo_Checkout"
+              onClick={() => {
+                history.push('/address')
+              }}
+            >
+              <p>Proceed To CheckOut</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

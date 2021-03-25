@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import './HomeScreen.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { listProducts } from '../actions/productActions'
+
 // import {PRODUCT_LIST_RESET} from '../constants/productConstants'
 
 const HomeScreens = () => {
@@ -30,6 +31,7 @@ const HomeScreens = () => {
 
   return (
     <div className="HomeScreen">
+     
       {loading ? (
         <p>Loading Products</p>
       ) : error ? (
@@ -83,7 +85,7 @@ const HomeScreens = () => {
                               style={{
                                 color: 'yellow',
                                 marginLeft: '4px',
-                                fontSize: '10px',
+                                fontSize: '8px',
                               }}
                               className="fas fa-star"
                             ></i>
@@ -232,10 +234,7 @@ const HomeScreens = () => {
                     </Link>
 
                     <p className="Premium_Brief">
-                      Lorem ipsum dolor sit amet, consectetur adip iscing elit,
-                      sed do eiusmod tem por incidi dunt ut labore et dolore
-                      magna ali qua. Ut enim ad minim veniam, quis nost rud
-                      reqtyr revder exercitation ullamco laboris nisi.
+                    {product.description2}
                     </p>
 
                     <Link className="Link_Card" to={`/product/${product._id}`}>

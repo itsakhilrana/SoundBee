@@ -10,6 +10,15 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    description2: {
+      type: String,
+      required: true,
+    },
+    keypoints: {
+      a:{type:String,required:true},
+      b:{type:String,required:true},
+      c:{type:String,required:true}
+    },
     image:{
       type:String,
       required:true

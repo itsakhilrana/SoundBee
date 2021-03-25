@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { USER_LOGOUT } from '../constants/userConstants'
 import { logout } from '../actions/userActions'
+
+import logo from '../Components/logo.svg'
 import './Header.css'
 const Header = () => {
   const dispatch = useDispatch()
@@ -19,7 +21,7 @@ const Header = () => {
       <div className="Navbar">
         <div className="Navbar_L">
           <Link to="/" className="Title">
-            SoundBee
+           <img src={logo} width="22px" ></img> SoundBee
           </Link>
         </div>
         <div className="Navbar_R">

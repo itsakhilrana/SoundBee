@@ -15,6 +15,11 @@
   height: 0;
 }
 
+.Flex{
+  display: flex;
+  justify-content: space-between;
+}
+
 .Cart_Card {
   display: flex;
   font-size: 14px;
@@ -78,6 +83,7 @@
   font-weight: 500;
   padding: 10px;
   cursor: pointer;
+  margin-left: 100px;
 }
 
 .ProceedTo_Checkout:hover {

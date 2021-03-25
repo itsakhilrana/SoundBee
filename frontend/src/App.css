@@ -4,19 +4,35 @@
   box-sizing: border-box;
 }
 
-.App{
+::-webkit-scrollbar{
+  width: 10px;
+  
+}
+
+::-webkit-scrollbar-track{
+  background-color: rgba(255, 255, 255, 0.048);
+  
+  
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #6e6e6e4d;
+  border-radius: 20px;
+}
+
+.App {
   background-color: #202327;
 }
 
-.Modal{
-  background-color:  #202327;
+.Modal {
+  background-color: #202327;
   position: absolute;
-    top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 40px;
-   padding: 50px 50px;
-    
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  padding: 80px 50px;
+  border: 0;
 }
 
 .Overlay {
@@ -26,95 +42,107 @@
   right: 0;
   bottom: 0;
   background-color: #e4e4e493;
+
 }
 
-.close{
+.close {
   float: right;
   width: 80px;
   height: 25px;
-  background-color: rgba(255, 255, 255, 0.349);
+  background-color: rgba(255, 255, 255, 0.082);
   color: rgb(255, 255, 255);
   justify-content: center;
   display: flex;
   align-items: center;
   border-radius: 5px;
   cursor: pointer;
-}
-.Modal_Container{
-  
-  color: white;
-  
+  font-size: 14px;
+  font-weight: 300;
 }
 
-.Modal_L{
+.close:hover{
+
+  background-color: rgba(255, 255, 255, 0.359);
+}
+.Modal_Container {
+  color: white;
+}
+
+.Modal_L {
   /* background-color: chocolate; */
   letter-spacing: 1px;
   display: flex;
 }
 
-.About_Container{
+.About_Container {
   width: 500px;
   margin-top: 10px;
 }
-.About_web{
+.About_web {
   color: rgba(255, 255, 255, 0.651);
-  
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .Web_Name {
   font-size: 92px;
   font-weight: 700;
 }
-.Modal_M{
+.Modal_M {
   /* background-color: cyan; */
   margin-left: 50px;
   width: 240px;
 }
 
-.Developed{
+.Developed {
   font-size: 30px;
-  
 }
 
-.Developed_List{
+.Developed_List {
   margin-top: 10px;
   color: rgba(255, 255, 255, 0.651);
+  font-size: 14px;
+  font-weight: 300;
 }
 
-.Modal_R{
+.Modal_R {
   /* background-color: darkgoldenrod; */
   margin-left: 50px;
   width: 240px;
 }
 
-.In_Development{
+.In_Development {
   font-size: 30px;
 }
 
-.In_Development_List{
+.In_Development_List {
   margin-top: 10px;
   color: rgba(255, 255, 255, 0.651);
+  font-size: 14px;
+  font-weight: 300;
 }
 
-.Tech{
+.Tech {
   margin-top: 20px;
 }
 
-.Tech_Used{
+.Tech_Used {
   font-size: 30px;
   color: white;
 }
 
-.Tech ul{
+.Tech ul {
   margin-top: 15px;
   list-style: none;
   display: flex;
 }
 
-.Tech li{
+.Tech li {
   width: 80px;
   height: 25px;
   background-color: rgba(255, 255, 255, 0.349);
+  font-size: 14px;
+  font-weight: 300;
   color: rgb(255, 255, 255);
   justify-content: center;
   display: flex;
