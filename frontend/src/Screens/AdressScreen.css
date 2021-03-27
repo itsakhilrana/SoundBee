@@ -58,3 +58,23 @@
 .AddressScreen button:hover {
   background-color: rgba(255, 255, 255, 0.959);
 }
+
+
+@media only screen and (max-width: 414px) {
+
+  .AddressScreen {
+    /* margin-top: 65px; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+  }
+  
+  .AddressScreen form {
+    width: 340px;
+    margin: 0 auto;
+  }
+
+}

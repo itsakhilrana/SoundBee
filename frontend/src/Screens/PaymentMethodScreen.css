@@ -53,3 +53,9 @@ button:focus {
 }
 
 
+@media only screen and (max-width: 414px) {
+  .PaymentMethod{
+    
+    font-size: 28px;
+  }}
+

@@ -30,7 +30,7 @@ const PaymentMethodScreen = ({history}) => {
         <div className="PaymentMethodScreen">
 
          <div className="Payment_Container">
-         <p>Payment Method</p>
+         <p className="PaymentMethod">Payment Method</p>
           <form onSubmit={paymentHandler}>
           <div>
             <label>Paypal</label>
