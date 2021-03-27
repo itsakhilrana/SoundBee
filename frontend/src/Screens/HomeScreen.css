@@ -251,6 +251,10 @@
   font-weight: 700;
 }
 
+.Products_Scroll3{
+  display: none;
+}
+
 @media only screen and (max-width: 414px) {
   .HomeScreen {
     margin-top: 0px;
@@ -272,14 +276,21 @@
 
   .Products_Scroll {
     width: 414px;
-    margin-top: 60px;
+    margin-top: 40px;
     height: 200px;
   }
 
   .Products_Scroll2 {
     width: 414px;
-    margin-top: 110px;
-    height: 200px;
+    margin-top: 80px;
+    height: 180px;
+  }
+
+  .Products_Scroll3 {
+    width: 414px;
+    margin-top: 0px;
+    height: 180px;
+    display: inline-block;
   }
 
   .Scroll_container {
@@ -301,4 +312,26 @@
     font-size: 20px;
     font-weight: 700;
   }
+
+  .Card {
+    height: 205px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.048);
+    border-radius: 10px;
+    padding: 10px 10px;
+  
+    margin-right: 20px;
+  }
+  
+
+  .Card2 {
+    height: 120px;
+    width: 245px;
+    background-color: rgba(255, 255, 255, 0.048);
+    border-radius: 10px;
+    padding: 10px 10px;
+    display: flex;
+    margin-right: 20px;
+  }
+  
 }
