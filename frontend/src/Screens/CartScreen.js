@@ -106,6 +106,7 @@ const CartScreen = ({ history, match, location }) => {
           </div>
         )}
       </div>
+      
     </div>
   )
 }

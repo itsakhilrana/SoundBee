@@ -96,3 +96,69 @@
     background-color: rgba(255, 255, 255, 0.959);
     
   }
+
+
+
+  @media only screen and (max-width: 414px) {
+  
+    .Product_Screen{
+        height: 100%;
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        padding-top: 65px;
+    }
+    
+    .Product_Screen {
+        color: white;
+    }
+    
+    
+    .ProductScreen_Container{
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Product_Detail{
+        display: inline-block;
+    }
+
+
+    .Product_Img img{
+        width: 370px;
+        height: auto;
+    }
+    
+    .Product_Breif{
+        padding: 0px 0px;
+        margin-left: 0px;
+        width: 380px;
+        margin-top: 20px;
+        /* background-color: tomato; */
+        letter-spacing: 0.6px;
+        
+    }
+
+    .Back_btn{
+        margin: 0px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 60px;
+        background-color: rgba(255, 255, 255, 0.397);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        cursor: pointer;
+    
+    }
+
+
+    
+    
+
+}

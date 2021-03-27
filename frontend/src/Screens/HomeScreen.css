@@ -253,9 +253,9 @@
 
 @media only screen and (max-width: 414px) {
   .HomeScreen {
-    margin-top: 65px;
+    margin-top: 0px;
     height: 100vh;
-    padding-top: 0px;
+    padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
   }

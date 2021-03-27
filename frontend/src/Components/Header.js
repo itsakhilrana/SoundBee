@@ -82,7 +82,7 @@ const Header = () => {
                 <div className="Search_Btn">Search</div>
               </div>
             </li> */}
-            <li>
+            <li className="last">
               <p>
                 <i
                   style={{

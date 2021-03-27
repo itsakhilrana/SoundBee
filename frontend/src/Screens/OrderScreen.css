@@ -156,3 +156,48 @@
   .PayPal_Btn{
     margin-top: 30px;
   }
+
+
+  @media only screen and (max-width: 414px) {
+
+    .OrderScreen {
+      height: 100%;
+      width: 100%;
+      display: inline-block;
+      padding: 100px 50px 50px 50px;
+    
+      color: white;
+      font-size: 35px;
+      justify-content: space-around;
+    }
+    
+    .CartItem_ContainerOrder {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 20px;
+      grid-column-gap: 20px;
+      height: 100%;
+    }
+
+    .Order_Summary{
+      padding: 10px 10px 10px 10px;
+      border: 1px solid rgb(65, 65, 65);
+      height: 340px;
+      width: 310px;
+      margin-top: 40px;
+    }
+
+    .Place_Order{
+      font-size: 24px;
+     font-weight: 500;
+     text-align: center;
+    }
+
+    .col2 {
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      
+    }
+  }

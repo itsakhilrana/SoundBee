@@ -123,6 +123,22 @@ li {
 
   .Navbar_R ul {
     list-style: none;
-    display: inline-block;
+    display: flex;
+    margin-right: 15px;
+  }
+
+  .Links {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+  }
+  li {
+    margin-left: 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .last{
+    display: none;
   }
 }

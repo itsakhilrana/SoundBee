@@ -89,3 +89,34 @@
 .ProceedTo_Checkout:hover {
   background-color: rgba(255, 255, 255, 0.404);
 }
+
+
+@media only screen and (max-width: 414px) {
+
+  .CartScreen {
+    height: 100vh;
+    padding: 0px;
+    padding-top: 135px;
+    color: white;
+    font-size: 35px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .CartItem_Container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    height: 100%;
+    margin-bottom: 60px;
+  }
+  
+  .Flex{
+    display: inline-block;
+    justify-content: space-between;
+    direction: ltr;
+  }
+
+  
+}
