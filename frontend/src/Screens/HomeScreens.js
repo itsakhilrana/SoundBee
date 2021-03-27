@@ -118,7 +118,7 @@ const HomeScreens = () => {
                   ))}
                 </ScrollContainer>
               </div>
-              <div className="Products_Scroll">
+              <div className="Products_Scroll2">
                 <p style={{ fontSize: '14px', marginBottom: '20px', letterSpacing:"1px" }}>
                   Best Seller's
                 </p>

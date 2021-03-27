@@ -24,7 +24,7 @@ function App({hideLoader}) {
   return (
     <Router>
       <div className="App">
-        <MyModal></MyModal>
+        {/* <MyModal></MyModal> */}
         <Header></Header>
         <Switch>
           <Route exact path="/" component={HomeScreen}></Route>

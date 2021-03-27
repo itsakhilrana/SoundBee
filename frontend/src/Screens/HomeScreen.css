@@ -1,6 +1,6 @@
 .HomeScreen {
   margin-top: 65px;
- height: 100vh;
+  height: 100vh;
   padding-top: 0px;
   padding-left: 20px;
   padding-right: 20px;
@@ -27,11 +27,15 @@
   margin-top: 30px;
 }
 
+.Products_Scroll2 {
+  width: 800px;
+  margin-top: 30px;
+}
+
 .Scroll_container {
   overflow: hidden;
   height: 250px;
   display: flex;
- 
 }
 
 /* .row {
@@ -59,7 +63,7 @@
   background-color: rgba(255, 255, 255, 0.048);
   border-radius: 10px;
   padding: 10px 10px;
- 
+
   margin-right: 40px;
 }
 
@@ -80,7 +84,7 @@
 .Product_Brief {
   font-size: 10px;
   color: white;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   margin-top: 2px;
   margin-bottom: 5px;
 }
@@ -100,7 +104,7 @@
   margin-top: 10px;
 }
 
-.Explore_btn:hover{
+.Explore_btn:hover {
   background-color: rgba(255, 255, 255, 0.959);
 }
 
@@ -135,7 +139,7 @@
   color: white;
 
   margin-top: 2px;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   margin-bottom: 10px;
 }
 
@@ -167,7 +171,7 @@
   align-items: center;
 }
 
-.Btn_Add:hover{
+.Btn_Add:hover {
   background-color: rgba(255, 255, 255, 0.959);
 }
 
@@ -231,9 +235,8 @@
   margin-top: 30px;
 }
 
-.Premium_Btn:hover{
+.Premium_Btn:hover {
   background-color: rgba(255, 255, 255, 0.219);
-  
 }
 
 .Ads {
@@ -246,4 +249,56 @@
   color: rgba(255, 255, 255, 0.377);
   font-size: 50px;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 414px) {
+  .HomeScreen {
+    margin-top: 65px;
+    height: 100vh;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .Product_Container {
+    display: inline-block;
+  }
+
+  .Products {
+    width: 100%;
+    color: white;
+    padding-top: 0px;
+  }
+
+  .Products_Scroll {
+    width: 414px;
+    margin-top: 60px;
+    height: 200px;
+  }
+
+  .Products_Scroll2 {
+    width: 414px;
+    margin-top: 110px;
+    height: 200px;
+  }
+
+  .Scroll_container {
+    overflow: auto;
+    height: 250px;
+    display: flex;
+  }
+
+  .Premium_Products {
+    display: none;
+  }
+
+  .Ads {
+    width: 350px;
+  }
+  .Ads_Container p {
+    margin-top: 0px;
+    color: rgba(255, 255, 255, 0.377);
+    font-size: 20px;
+    font-weight: 700;
+  }
 }
