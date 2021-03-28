@@ -17,11 +17,11 @@ const SignupScreen = ({ history }) => {
   const { loading, userInfo, error } = userReg
 
   useEffect(() => {
-    // dispatch({ type: USER_REG_LOGOUT })
+    dispatch({ type: USER_REG_LOGOUT })
     if (userInfo) {
       history.push('/login')
     }
-    // dispatch({ type: USER_RESET_ERROR })
+    dispatch({ type: USER_RESET_ERROR })
     
   }, [history, userInfo])
 

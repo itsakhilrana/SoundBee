@@ -29,7 +29,7 @@ function LoginScreen({ history, location }) {
       history.push(redirect)
     }
 
-    // dispatch({ type: USER_RESET_ERROR })
+    dispatch({ type: USER_RESET_ERROR })
   }, [history, userInfo])
 
   const sumbitHandler = (e) => {
