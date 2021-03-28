@@ -5,8 +5,10 @@ import {
   USER_LOGIN_REQUEST,
   USER_REG_FAIL,
   USER_REG_REQUEST,
-  USER_REG_SUCCESS,
+  USER_REG_SUCCESS,USER_REG_LOGOUT
 } from '../constants/userConstants'
+
+import {RESET_SHIPPING_ADDRESS} from '../constants/cartConstants'
 
 export const userLoginAction = (email, password) => async (dispatch) => {
   dispatch({ type: USER_LOGIN_REQUEST })
@@ -76,5 +78,8 @@ export const userRegAction = (regInfo) => async (dispatch) => {
 
 export const logout = () => async (dispatch) => {
   localStorage.removeItem('userInfo')
+  localStorage.removeItem('shippingAddress')
   dispatch({ type: USER_LOGOUT })
+  dispatch({ type: USER_REG_LOGOUT })
+  dispatch({ type: RESET_SHIPPING_ADDRESS })
 }

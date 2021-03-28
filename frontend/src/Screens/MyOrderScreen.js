@@ -5,7 +5,12 @@ import { Link } from 'react-router-dom'
 
 import './MyOrderScreen.css'
 
-const MyOrderScreen = () => {
+const MyOrderScreen = ({history}) => {
+
+  const userLogin = useSelector(state => state.userLogin)
+
+  const {userInfo} = userLogin
+  
   const myOrder = useSelector((state) => state.myOrder)
 
   const { loading, order: myOrderList, error } = myOrder
@@ -13,7 +18,13 @@ const MyOrderScreen = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(myOrdersAction())
+
+    if(!userInfo){
+     return history.push('/')
+    }
+      dispatch(myOrdersAction())
+    
+    
   }, [dispatch])
 
   return (

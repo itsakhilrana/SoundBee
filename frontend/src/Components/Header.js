@@ -6,7 +6,7 @@ import { logout } from '../actions/userActions'
 
 import logo from '../Components/logo.svg'
 import './Header.css'
-const Header = () => {
+const Header = ({history}) => {
   const dispatch = useDispatch()
   const userLogin = useSelector((state) => state.userLogin)
   const { loading, userInfo, error } = userLogin
@@ -14,6 +14,7 @@ const Header = () => {
 
   const logoutHandler = () => {
     dispatch(logout())
+    history.push('/')
   }
 
   return (
