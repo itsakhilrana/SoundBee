@@ -63,10 +63,97 @@ const PlaceorderScreen = ({history}) => {
   }
 
   return (
-    <div className="PlaceorderScreen">
-      <h1>PLaceOrder</h1>
-    </div>
-  )
+        <div className="PlaceorderScreen">
+          <div className="Order_Items">
+            <div className="CartItem_ContainerPlaceOrder">
+              {cartItems.length === 0 ? (
+                <p>No item</p>
+              ) : (
+                cartItems.map((product, i) => {
+                  return (
+                    
+                      <div className="Cart_Card" key={i}>
+                        <div>
+                          <img src={product.image} width="70px" height="70px"></img>
+                        </div>
+                        <div className="Cart_Breif">
+                          <p className="CartProduct_Name">
+                            {product.name}{' '}
+                            <span className="qty">
+                              <select
+                                value={product.qty}
+                                onChange={(e) => {
+                                  dispatch(
+                                    cartAddItem(
+                                      product.product,
+                                      Number(e.target.value)
+                                    )
+                                  )
+                                }}
+                              >
+                                {[...Array(product.countInStock).keys()].map(
+                                  (x) => (
+                                    <option key={x + 1} value={x + 1}>
+                                      {x + 1}
+                                    </option>
+                                  )
+                                )}
+                              </select>
+                            </span>
+                          </p>
+                          <p className="About_Product">{product.description} </p>
+    
+                          <p className="price">
+                            ${product.price}{' '}
+                            <span
+                              className="removeItem"
+                              onClick={() => removeItemHandler(product.product)}
+                            >
+                              Remove
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    
+                  )
+                })
+              )}
+            </div>
+            <div className="Shipping">
+              <p className="Shipping_Address">Shipping Address</p>
+    
+              <div className="Address_Details">
+                <p>{shippingAddress.address}</p>
+                <p>{shippingAddress.city}</p>
+                <p>{shippingAddress.postalCode} </p>
+                <p>{shippingAddress.country} </p>
+              </div>
+            </div>
+          </div>
+          <div className="Cart_Summary">
+            <p className="Cart_Summar">Cart Summary</p>
+            <div className="row">
+              <div className="col1">
+                <p>Item price</p>
+                <p>Shipping price</p>
+                <p>Tax price</p>
+                <p>Total price</p>
+                <br></br>
+                <p>PaymentMethod</p>
+              </div>
+              <div className="col2">
+                <p>${cart.itemsPrice}</p>
+                <p>${cart.shippingPrice}</p>
+                <p>${cart.taxPrice}</p>
+                <p>${cart.totalPrice}</p>
+                <br></br>
+                <p>{paymentMethod}</p>
+              </div>
+            </div>
+            <button onClick={placeOrderHandler}>Place Order</button>
+          </div>
+        </div>
+      )
 }
 
 export default PlaceorderScreen
