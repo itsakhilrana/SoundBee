@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { detailProduct } from '../actions/productActions'
 import { cartAddItem } from '../actions/cartActions'
+import LoadingSpinner from '../Components/LoadingSpinner'
 import './ProductScreen.css'
 
 const ProductScreen = ({ history, match }) => {
@@ -28,7 +29,7 @@ const ProductScreen = ({ history, match }) => {
   return (
     <div className="Product_Screen">
       {loading ? (
-        <p>Loading</p>
+       <LoadingSpinner caption = {'Loading please wait...'}/>
       ) : error ? (
         <p>{error}</p>
       ) : (

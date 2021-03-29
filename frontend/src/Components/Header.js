@@ -14,7 +14,7 @@ const Header = ({history}) => {
 
   const logoutHandler = () => {
     dispatch(logout())
-    history.push('/')
+    // history.push('/')
   }
 
   return (

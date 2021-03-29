@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { orderDetailAction , payOrderAction} from '../actions/orderAction'
+import LoadingSpinner from '../Components/LoadingSpinner'
 
 import {PayPalButton} from 'react-paypal-button-v2'
 
@@ -52,7 +53,7 @@ export const OrderScreen = ({ history, match }) => {
     <div>
       <div className="OrderScreen">
         {loading ? (
-          <strong>Loading</strong>
+          <LoadingSpinner caption = {'Loading please wait...'}/>
         ) : error ? (
           <strong>{error}</strong>
         ) : (

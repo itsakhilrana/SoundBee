@@ -15,6 +15,8 @@ const PaymentMethodScreen = ({history}) => {
   const { shippingAddress, paymentMethod } = cart
 
   const [paymentmethod, setPaymentmethod] = useState(paymentMethod)
+
+  
   if (!shippingAddress) {
     history.push('/address')
   }

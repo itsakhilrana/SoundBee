@@ -8,6 +8,9 @@ const AddressScreen = ({history}) => {
   const cart = useSelector((state) => state.cart)
   const { shippingAddress } = cart
 
+  const userLogin = useSelector((state) => state.userLogin)
+  const { userInfo } = userLogin
+
   const dispatch = useDispatch()
 
   const [address, setAddress] = useState(shippingAddress.address)
@@ -15,6 +18,8 @@ const AddressScreen = ({history}) => {
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode)
   const [country, setCountry] = useState(shippingAddress.country)
 
+
+ 
   const addressHandler = () => {
       dispatch(saveAddress({address,city,postalCode,country}))
       history.push('/paymentmethod')

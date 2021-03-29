@@ -276,14 +276,14 @@
 
   .Products_Scroll {
     width: 414px;
-    margin-top: 40px;
+    margin-top: 30px;
     height: 200px;
   }
 
   .Products_Scroll2 {
     width: 414px;
-    margin-top: 80px;
-    height: 180px;
+    margin-top: 85px;
+    height: 190px;
   }
 
   .Products_Scroll3 {
@@ -309,8 +309,9 @@
   .Ads_Container p {
     margin-top: 0px;
     color: rgba(255, 255, 255, 0.377);
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
   }
 
   .Card {

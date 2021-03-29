@@ -1,17 +1,34 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartAddItem, cartRemoveItem } from '../actions/cartActions'
 import { placeOrderAction } from '../actions/orderAction'
 
 import './PlaceorderScreen.css'
 
-const PlaceorderScreen = ({history}) => {
+const PlaceorderScreen = ({ history }) => {
+  const dispatch = useDispatch()
+
+  const userLogin = useSelector((state) => state.userLogin)
+  const { userInfo } = userLogin
+
   const cart = useSelector((state) => state.cart)
   const { cartItems, shippingAddress, paymentMethod } = cart
 
-  const placeOrder = useSelector(state => state.placeOrder)
+  const placeOrder = useSelector((state) => state.placeOrder)
 
-  const {loading, error, success, order} = placeOrder
+  const { success, order } = placeOrder
+
+  useEffect(() => {
+    if (success) {
+      history.push(`/order/${order._id}`)
+    } 
+    
+    else if (Object.keys(shippingAddress).length === 0) {
+
+      history.push('/address')
+    }
+  }, [success, history])
+
   // calculations
   const addDecimals = (num) => {
     return (Math.round(num * 100) / 100).toFixed(2)
@@ -32,29 +49,24 @@ const PlaceorderScreen = ({history}) => {
     Number(cart.taxPrice)
   ).toFixed(2)
 
-
-
-
-  useEffect(() => {
-
-    if(success){
-      history.push(`/order/${order._id}`)
-    }
-  }, [success, history])
-  const dispatch = useDispatch()
-
   const placeOrderHandler = () => {
-    dispatch(
-      placeOrderAction({
-        cartItems: cart.cartItems,
-        shippingAddress: cart.shippingAddress,
-        paymentMethod: cart.paymentMethod,
-        itemPrice: cart.itemsPrice,
-        shippingPrice: cart.shippingPrice,
-        taxPrice: cart.taxPrice,
-        totalPrice: cart.totalPrice,
-      })
-    )
+    if (!userInfo) {
+      history.push('/login?redirect=placeorder')
+    } else {
+      dispatch(
+        placeOrderAction({
+          cartItems: cart.cartItems,
+          shippingAddress: cart.shippingAddress,
+          paymentMethod: cart.paymentMethod,
+          itemPrice: cart.itemsPrice,
+          shippingPrice: cart.shippingPrice,
+          taxPrice: cart.taxPrice,
+          totalPrice: cart.totalPrice,
+        })
+      )
+
+      // Also reset the cart items and details here
+    }
   }
   const removeItemHandler = (id) => {
     dispatch(cartRemoveItem(id))

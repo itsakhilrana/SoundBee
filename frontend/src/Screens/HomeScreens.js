@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import './HomeScreen.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { listProducts } from '../actions/productActions'
-
+import LoadingSpinner from '../Components/LoadingSpinner'
 // import {PRODUCT_LIST_RESET} from '../constants/productConstants'
 
 const HomeScreens = () => {
@@ -33,7 +33,7 @@ const HomeScreens = () => {
     <div className="HomeScreen">
      
       {loading ? (
-        <p>Loading Products</p>
+        <LoadingSpinner caption = {'Loading please wait...'}/>
       ) : error ? (
         <p>{error}</p>
       ) : (
@@ -195,7 +195,7 @@ const HomeScreens = () => {
 
               <div className="Products_Scroll3">
                 <p style={{ fontSize: '14px', marginBottom: '20px', letterSpacing:"1px" }}>
-                  Best Seller's
+                  Top Pick's
                 </p>
                 <ScrollContainer className="Scroll_container">
                   {products.map((product) => (
@@ -328,7 +328,7 @@ const HomeScreens = () => {
               <div className="Ads_Container">
                 <p>
                   FOR PURE BASS NOTHING BEATS{' '}
-                  <span style={{ color: 'white' }}>SoundBee</span>
+                  <span style={{ color: 'white' }}>SoundBee!</span>
                 </p>
               </div>
             </div>

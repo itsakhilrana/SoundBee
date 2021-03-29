@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { myOrdersAction } from '../actions/orderAction'
 import { Link } from 'react-router-dom'
 
+import LoadingSpinner from '../Components/LoadingSpinner'
+
 import './MyOrderScreen.css'
 
 const MyOrderScreen = ({history}) => {
@@ -30,7 +32,7 @@ const MyOrderScreen = ({history}) => {
   return (
     <div className="MyOrder_Screen">
       {loading ? (
-        <p>My Orders Loading...</p>
+        <LoadingSpinner caption={'Loading please wait...'}/>
       ) : error ? (
         <p>{error}</p>
       ) : (
