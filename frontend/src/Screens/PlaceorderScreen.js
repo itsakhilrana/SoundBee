@@ -22,7 +22,12 @@ const PlaceorderScreen = ({ history }) => {
     if (success) {
       history.push(`/order/${order._id}`)
     } 
-    
+     else if (!userInfo) {
+      history.push('/login?redirect=placeorder')
+    }
+    else if (cartItems.length === 0) {
+      history.push('/')
+    }
     else if (Object.keys(shippingAddress).length === 0) {
 
       history.push('/address')
