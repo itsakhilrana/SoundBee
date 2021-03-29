@@ -81,58 +81,60 @@ const PlaceorderScreen = ({ history }) => {
     <div className="PlaceorderScreen">
       <div className="Order_Items">
         <div className="CartItem_ContainerPlaceOrder">
-          {cartItems.length === 0 ? (
-            <p>No item</p>
-          ) : (
-            cartItems.map((product) => {
-              return (
-                <>
-                  <div className="Cart_Card" key={product.product}>
-                    <div>
-                      <img src={product.image} width="70px" height="70px"></img>
-                    </div>
-                    <div className="Cart_Breif">
-                      <p className="CartProduct_Name">
-                        {product.name}{' '}
-                        <span className="qty">
-                          <select
-                            value={product.qty}
-                            onChange={(e) => {
-                              dispatch(
-                                cartAddItem(
-                                  product.product,
-                                  Number(e.target.value)
-                                )
-                              )
-                            }}
-                          >
-                            {[...Array(product.countInStock).keys()].map(
-                              (x) => (
-                                <option key={x + 1} value={x + 1}>
-                                  {x + 1}
-                                </option>
-                              )
-                            )}
-                          </select>
-                        </span>
-                      </p>
-                      <p className="About_Product">{product.description} </p>
-
-                      <p className="price">
-                        ${product.price}{' '}
-                        <span
-                          className="removeItem"
-                          onClick={() => removeItemHandler(product.product)}
-                        >
-                          Remove
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </>
-              )
-            })
-          )}
+          {
+            cartItems.length === 0 ? <p>No Cart Item</p> : <div>
+              {
+                cartItems.map((product) => {
+                  return (
+                    <>
+                      <div className="Cart_Card" key={product.product}>
+                        <div>
+                          <img src={product.image} width="70px" height="70px"></img>
+                        </div>
+                        <div className="Cart_Breif">
+                          <p className="CartProduct_Name">
+                            {product.name}{' '}
+                            <span className="qty">
+                              <select
+                                value={product.qty}
+                                onChange={(e) => {
+                                  dispatch(
+                                    cartAddItem(
+                                      product.product,
+                                      Number(e.target.value)
+                                    )
+                                  )
+                                }}
+                              >
+                                {[...Array(product.countInStock).keys()].map(
+                                  (x) => (
+                                    <option key={x + 1} value={x + 1}>
+                                      {x + 1}
+                                    </option>
+                                  )
+                                )}
+                              </select>
+                            </span>
+                          </p>
+                          <p className="About_Product">{product.description} </p>
+    
+                          <p className="price">
+                            ${product.price}{' '}
+                            <span
+                              className="removeItem"
+                              onClick={() => removeItemHandler(product.product)}
+                            >
+                              Remove
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </>
+                  )
+                })
+              }
+            </div>
+          }
         </div>
         <div className="Shipping">
           <p className="Shipping_Address">Shipping Address</p>
