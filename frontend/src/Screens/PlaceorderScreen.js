@@ -81,7 +81,7 @@ const PlaceorderScreen = ({ history }) => {
     <div className="PlaceorderScreen">
       <div className="Order_Items">
         <div className="CartItem_ContainerPlaceOrder">
-          {
+          {/* {
             cartItems.length === 0 ? <p>No Cart Item</p> : <div>
               {
                 cartItems.map((product) => {
@@ -134,7 +134,7 @@ const PlaceorderScreen = ({ history }) => {
                 })
               }
             </div>
-          }
+          } */}
         </div>
         <div className="Shipping">
           <p className="Shipping_Address">Shipping Address</p>
