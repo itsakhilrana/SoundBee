@@ -29,14 +29,14 @@ app.use(productRoutes)
 
 
 
-const ping = () =>
-  request(
-    'https://soundbee.herokuapp.com/',
-    (error, response, body) => {
-      console.log('ping started')
-    }
-  )
-setInterval(ping, 1200000)
+// const ping = () =>
+//   request(
+//     'https://soundbee.herokuapp.com/',
+//     (error, response, body) => {
+//       console.log('ping started')
+//     }
+//   )
+// setInterval(ping, 1200000)
 
 // const ping2 = () =>
 //   request(
