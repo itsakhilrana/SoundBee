@@ -7,7 +7,61 @@ import './PlaceorderScreen.css'
 
 
 
-const PlaceorderScreen = () => {
+const PlaceorderScreen = ({history}) => {
+
+    const cart = useSelector((state) => state.cart)
+  const { cartItems, shippingAddress, paymentMethod } = cart
+
+  const placeOrder = useSelector(state => state.placeOrder)
+
+  const {loading, error, success, order} = placeOrder
+  // calculations
+  const addDecimals = (num) => {
+    return (Math.round(num * 100) / 100).toFixed(2)
+  }
+
+  let cost = 0
+  cartItems.map((product) => {
+    cost = product.price * product.qty + cost
+  })
+  cart.itemsPrice = addDecimals(Number(cost))
+
+  cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)))
+  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100)
+
+  cart.totalPrice = (
+    Number(cart.itemsPrice) +
+    Number(cart.shippingPrice) +
+    Number(cart.taxPrice)
+  ).toFixed(2)
+
+
+
+    useEffect(() => {
+
+    if(success){
+      history.push(`/order/${order._id}`)
+    }
+  }, [success, history])
+  const dispatch = useDispatch()
+
+  const placeOrderHandler = () => {
+    dispatch(
+      placeOrderAction({
+        cartItems: cart.cartItems,
+        shippingAddress: cart.shippingAddress,
+        paymentMethod: cart.paymentMethod,
+        itemPrice: cart.itemsPrice,
+        shippingPrice: cart.shippingPrice,
+        taxPrice: cart.taxPrice,
+        totalPrice: cart.totalPrice,
+      })
+    )
+  }
+  const removeItemHandler = (id) => {
+    dispatch(cartRemoveItem(id))
+  }
+
   return (
     <div className="PlaceorderScreen">
       <h1>PLaceOrder</h1>
