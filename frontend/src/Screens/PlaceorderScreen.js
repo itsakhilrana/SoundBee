@@ -1,25 +1,17 @@
-import React, { useEffect } from 'react'
+import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartAddItem, cartRemoveItem } from '../actions/cartActions'
 import { placeOrderAction } from '../actions/orderAction'
 
 import './PlaceorderScreen.css'
 
-const PlaceorderScreen = ({ history }) => {
-  const dispatch = useDispatch()
-
-  const userLogin = useSelector((state) => state.userLogin)
-  const { userInfo } = userLogin
-
+const PlaceorderScreen = ({history}) => {
   const cart = useSelector((state) => state.cart)
   const { cartItems, shippingAddress, paymentMethod } = cart
 
-  const placeOrder = useSelector((state) => state.placeOrder)
+  const placeOrder = useSelector(state => state.placeOrder)
 
-  const { success, order } = placeOrder
-
-  
-
+  const {loading, error, success, order} = placeOrder
   // calculations
   const addDecimals = (num) => {
     return (Math.round(num * 100) / 100).toFixed(2)
@@ -41,41 +33,28 @@ const PlaceorderScreen = ({ history }) => {
   ).toFixed(2)
 
 
-  useEffect(() => {
-    if (success) {
-      history.push(`/order/${order._id}`)
-    } 
-     else if (!userInfo) {
-      history.push('/login?redirect=placeorder')
-    }
-    else if (cartItems.length === 0) {
-      history.push('/')
-    }
-    else if (Object.keys(shippingAddress).length === 0) {
 
-      history.push('/address')
+
+  useEffect(() => {
+
+    if(success){
+      history.push(`/order/${order._id}`)
     }
   }, [success, history])
+  const dispatch = useDispatch()
 
-  
   const placeOrderHandler = () => {
-    if (!userInfo) {
-      history.push('/login?redirect=placeorder')
-    } else {
-      dispatch(
-        placeOrderAction({
-          cartItems: cart.cartItems,
-          shippingAddress: cart.shippingAddress,
-          paymentMethod: cart.paymentMethod,
-          itemPrice: cart.itemsPrice,
-          shippingPrice: cart.shippingPrice,
-          taxPrice: cart.taxPrice,
-          totalPrice: cart.totalPrice,
-        })
-      )
-
-      // Also reset the cart items and details here
-    }
+    dispatch(
+      placeOrderAction({
+        cartItems: cart.cartItems,
+        shippingAddress: cart.shippingAddress,
+        paymentMethod: cart.paymentMethod,
+        itemPrice: cart.itemsPrice,
+        shippingPrice: cart.shippingPrice,
+        taxPrice: cart.taxPrice,
+        totalPrice: cart.totalPrice,
+      })
+    )
   }
   const removeItemHandler = (id) => {
     dispatch(cartRemoveItem(id))
@@ -85,60 +64,58 @@ const PlaceorderScreen = ({ history }) => {
     <div className="PlaceorderScreen">
       <div className="Order_Items">
         <div className="CartItem_ContainerPlaceOrder">
-          {/* {
-            cartItems.length === 0 ? <p>No Cart Item</p> : <div>
-              {
-                cartItems.map((product) => {
-                  return (
-                    <>
-                      <div className="Cart_Card" key={product.product}>
-                        <div>
-                          <img src={product.image} width="70px" height="70px"></img>
-                        </div>
-                        <div className="Cart_Breif">
-                          <p className="CartProduct_Name">
-                            {product.name}{' '}
-                            <span className="qty">
-                              <select
-                                value={product.qty}
-                                onChange={(e) => {
-                                  dispatch(
-                                    cartAddItem(
-                                      product.product,
-                                      Number(e.target.value)
-                                    )
-                                  )
-                                }}
-                              >
-                                {[...Array(product.countInStock).keys()].map(
-                                  (x) => (
-                                    <option key={x + 1} value={x + 1}>
-                                      {x + 1}
-                                    </option>
-                                  )
-                                )}
-                              </select>
-                            </span>
-                          </p>
-                          <p className="About_Product">{product.description} </p>
-    
-                          <p className="price">
-                            ${product.price}{' '}
-                            <span
-                              className="removeItem"
-                              onClick={() => removeItemHandler(product.product)}
-                            >
-                              Remove
-                            </span>
-                          </p>
-                        </div>
-                      </div>
-                    </>
-                  )
-                })
-              }
-            </div>
-          } */}
+          {cartItems.length === 0 ? (
+            <p>No item</p>
+          ) : (
+            cartItems.map((product) => {
+              return (
+                <>
+                  <div className="Cart_Card" key={product.product}>
+                    <div>
+                      <img src={product.image} width="70px" height="70px"></img>
+                    </div>
+                    <div className="Cart_Breif">
+                      <p className="CartProduct_Name">
+                        {product.name}{' '}
+                        <span className="qty">
+                          <select
+                            value={product.qty}
+                            onChange={(e) => {
+                              dispatch(
+                                cartAddItem(
+                                  product.product,
+                                  Number(e.target.value)
+                                )
+                              )
+                            }}
+                          >
+                            {[...Array(product.countInStock).keys()].map(
+                              (x) => (
+                                <option key={x + 1} value={x + 1}>
+                                  {x + 1}
+                                </option>
+                              )
+                            )}
+                          </select>
+                        </span>
+                      </p>
+                      <p className="About_Product">{product.description} </p>
+
+                      <p className="price">
+                        ${product.price}{' '}
+                        <span
+                          className="removeItem"
+                          onClick={() => removeItemHandler(product.product)}
+                        >
+                          Remove
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </>
+              )
+            })
+          )}
         </div>
         <div className="Shipping">
           <p className="Shipping_Address">Shipping Address</p>
