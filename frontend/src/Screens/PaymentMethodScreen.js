@@ -14,7 +14,7 @@ const PaymentMethodScreen = ({history}) => {
     const cart = useSelector((state) => state.cart)
   const { shippingAddress, paymentMethod } = cart
 
-  const [paymentmethod, setPaymentmethod] = useState(paymentMethod)
+  const [paymentmethod, setPaymentmethod] = useState("Paypal")
 
   
   if (!shippingAddress) {

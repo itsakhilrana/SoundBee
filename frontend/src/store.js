@@ -30,7 +30,7 @@ const shippingAddressFromStorage = localStorage.getItem('shippingAddress')
 
   const paymentMethodFromStorage = localStorage.getItem('paymentMethod')
   ? JSON.parse(localStorage.getItem('paymentMethod'))
-  : {}
+  : ''
 const initialState = {
   
   userLogin:{userInfo: userInfoFromStorage},
