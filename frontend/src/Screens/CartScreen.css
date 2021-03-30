@@ -118,5 +118,9 @@
     direction: ltr;
   }
 
+
+  .ProceedTo_Checkout{
+    display: none;
+  }
   
 }

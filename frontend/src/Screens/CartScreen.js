@@ -106,7 +106,15 @@ const CartScreen = ({ history, match, location }) => {
           </div>
         )}
       </div>
-      
+      <div className="Bottom_btn">
+        <button
+          onClick={() => {
+            history.push('/address')
+          }}
+        >
+          <p>Proceed To CheckOut</p>
+        </button>
+      </div>
     </div>
   )
 }

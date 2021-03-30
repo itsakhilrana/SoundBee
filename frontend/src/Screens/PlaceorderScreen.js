@@ -1,20 +1,20 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartAddItem, cartRemoveItem } from '../actions/cartActions'
 import { placeOrderAction } from '../actions/orderAction'
 
 import './PlaceorderScreen.css'
 
-const PlaceorderScreen = ({history}) => {
+const PlaceorderScreen = ({ history }) => {
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
 
   const cart = useSelector((state) => state.cart)
   const { cartItems, shippingAddress, paymentMethod } = cart
 
-  const placeOrder = useSelector(state => state.placeOrder)
+  const placeOrder = useSelector((state) => state.placeOrder)
 
-  const {loading, error, success, order} = placeOrder
+  const { loading, error, success, order } = placeOrder
   // calculations
   const addDecimals = (num) => {
     return (Math.round(num * 100) / 100).toFixed(2)
@@ -35,21 +35,15 @@ const PlaceorderScreen = ({history}) => {
     Number(cart.taxPrice)
   ).toFixed(2)
 
-
-
-
   useEffect(() => {
-
-    if(success){
+    if (success) {
       history.push(`/order/${order._id}`)
-    }
-    else if (!userInfo) {
+    } else if (!userInfo) {
       history.push('/login?redirect=placeorder')
-    }
-    else if (cartItems.length === 0) {
+    } else if (cartItems.length === 0) {
       history.push('/')
-    }
-    else if (Object.keys(shippingAddress).length === 0) { // empty object always true that's why we checking the length
+    } else if (Object.keys(shippingAddress).length === 0) {
+      // empty object always true that's why we checking the length
       history.push('/address')
     }
   }, [success, history])
@@ -73,7 +67,6 @@ const PlaceorderScreen = ({history}) => {
 
       //Also reset the cart items and details here
     }
-    
   }
   const removeItemHandler = (id) => {
     dispatch(cartRemoveItem(id))
@@ -81,7 +74,19 @@ const PlaceorderScreen = ({history}) => {
 
   return (
     <div className="PlaceorderScreen">
-      <div className="Order_Items">
+     
+     <div className="PlaceOrder_Container">
+     <div className="Order_Items">
+        {/* <div className="ShippingPlace">
+          <p className="Shipping_Address">Shipping Address</p>
+
+          <div className="Address_DetailsPlace">
+            <p>
+              {shippingAddress.address} {shippingAddress.city}{' '}
+              {shippingAddress.postalCode} {shippingAddress.country}
+            </p>
+          </div>
+        </div> */}
         <div className="CartItem_ContainerPlaceOrder">
           {cartItems.length === 0 ? (
             <p>No item</p>
@@ -121,7 +126,7 @@ const PlaceorderScreen = ({history}) => {
                       <p className="About_Product">{product.description} </p>
 
                       <p className="price">
-                        ${product.price}{' '}
+                        ${product.price}
                         <span
                           className="removeItem"
                           onClick={() => removeItemHandler(product.product)}
@@ -136,17 +141,34 @@ const PlaceorderScreen = ({history}) => {
             })
           )}
         </div>
-        <div className="Shipping">
-          <p className="Shipping_Address">Shipping Address</p>
-
-          <div className="Address_Details">
-            <p>{shippingAddress.address}</p>
-            <p>{shippingAddress.city}</p>
-            <p>{shippingAddress.postalCode} </p>
-            <p>{shippingAddress.country} </p>
+      </div>
+      <div className="Cart_SummaryMob">
+        <p className="Cart_Summar">Cart Summary</p>
+        <div className="row">
+          <div className="col1">
+          <p>PaymentMethod</p>
+            <p>Item price</p>
+            <p>Shipping price</p>
+            <p>Tax price</p>
+            <p>Total price</p>
+            <br></br>
+            <p>Shipping To</p>
+          </div>
+          <div className="col2">
+          <p>{paymentMethod}</p>
+            <p>${cart.itemsPrice}</p>
+            <p>${cart.shippingPrice}</p>
+            <p>${cart.taxPrice}</p>
+            <p>${cart.totalPrice}</p>
+            <br></br>
+            <p>
+              {shippingAddress.address}, {shippingAddress.city}, {shippingAddress.postalCode}, {shippingAddress.country}
+            </p>
           </div>
         </div>
+       
       </div>
+
       <div className="Cart_Summary">
         <p className="Cart_Summar">Cart Summary</p>
         <div className="row">
@@ -168,6 +190,12 @@ const PlaceorderScreen = ({history}) => {
           </div>
         </div>
         <button onClick={placeOrderHandler}>Place Order</button>
+      </div>
+
+     </div>
+      <div className='Bottom_btn'>
+        <button onClick={placeOrderHandler}><p>Place Your Order</p>
+        <p>${cart.totalPrice}</p></button>
       </div>
     </div>
   )

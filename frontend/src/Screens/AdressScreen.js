@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { saveAddress } from '../actions/cartActions'
 import './AdressScreen.css'
 
-const AddressScreen = ({history}) => {
-
+const AddressScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart)
   const { shippingAddress } = cart
 
@@ -18,17 +17,17 @@ const AddressScreen = ({history}) => {
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode)
   const [country, setCountry] = useState(shippingAddress.country)
 
-
- 
   const addressHandler = () => {
-      dispatch(saveAddress({address,city,postalCode,country}))
-      history.push('/paymentmethod')
+    dispatch(saveAddress({ address, city, postalCode, country }))
+    history.push('/paymentmethod')
   }
 
   return (
     <>
       <div className="AddressScreen">
+        
         <form onSubmit={addressHandler}>
+        <p>Address & PaymentMethod</p>
           <div>
             <label>Address</label>
             <input
@@ -68,6 +67,13 @@ const AddressScreen = ({history}) => {
           ></input>
 
           <button type="submit">Continue</button>
+          <div className="Bottom_btn">
+            <button
+              type='submit'
+            >
+              <p>Continue</p>
+            </button>
+          </div>
         </form>
       </div>
     </>

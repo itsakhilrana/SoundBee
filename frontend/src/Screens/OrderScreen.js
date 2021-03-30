@@ -59,6 +59,16 @@ export const OrderScreen = ({ history, match }) => {
         ) : (
           <>
             <div className="Order_Items">
+            {/* <div className="ShippingPlace">
+          <p className="Shipping_Address">Shipping Address</p>
+
+          <div className="Address_DetailsPlace">
+            <p>
+              {order.shippingAddress.address} {order.shippingAddress.city}{' '}
+              {order.shippingAddress.postalCode} {order.shippingAddress.country}
+            </p>
+          </div>
+        </div> */}
               <div className="CartItem_ContainerOrder">
                 {order.cartItems.map((product) => {
                   return (
@@ -97,16 +107,7 @@ export const OrderScreen = ({ history, match }) => {
                   )
                 })}
               </div>
-              <div className="Shipping">
-                <p className="Shipping_Address">Shipping Address</p>
-
-                <div className="Address_Details">
-                  <p>{order.shippingAddress.address}</p>
-                  <p>{order.shippingAddress.city}</p>
-                  <p>{order.shippingAddress.postalCode} </p>
-                  <p>{order.shippingAddress.country} </p>
-                </div>
-              </div>
+             
             </div>
             <div className="Order_Summary">
               <p className="Place_Order">Order Summary</p>

@@ -1,34 +1,30 @@
 .PaymentMethodScreen {
-  
-  
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    color: white;
-    font-size: 35px;
-    
-  }
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.Payment_Container{
+  color: white;
+  font-size: 20px;
+}
+
+.Payment_Container {
   padding: 40px;
-  border: 1px solid rgb(61, 61, 61);
- height: 300px;
+
+  height: 300px;
 }
 
 .Payment_Container form {
   padding-top: 20px;
-  position: relative;
+  width: 320px;
 }
 
 .Payment_Container label {
-  font-size: 20px;
+  font-size: 16px;
   margin-right: 10px;
 }
 
 .Payment_Container button {
-  position: absolute;
   right: 0;
   bottom: 10;
   background-color: rgba(255, 255, 255, 0.411);
@@ -42,7 +38,6 @@
   text-decoration: none;
   padding: 10px 15px;
   font-weight: bold;
-
 }
 button:focus {
   outline: 0;
@@ -52,10 +47,34 @@ button:focus {
   background-color: rgba(255, 255, 255, 0.959);
 }
 
-
 @media only screen and (max-width: 414px) {
-  .PaymentMethod{
-    
-    font-size: 28px;
-  }}
+  .PaymentMethodScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    color: white;
+    font-size: 35px;
+  }
+  .PaymentMethod {
+    font-size: 28px;
+  }
+
+  .Payment_Container button {
+    background-color: rgba(255, 255, 255, 0.815);
+    border: 0;
+    padding: 10px 15px;
+    width: 100%;
+    color: black;
+    height: 60px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border: 0;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+}
