@@ -29,7 +29,7 @@ const ProductScreen = ({ history, match }) => {
   return (
     <div className="Product_Screen">
       {loading ? (
-       <LoadingSpinner caption = {'Loading please wait...'}/>
+        <LoadingSpinner caption={'Loading please wait...'} />
       ) : error ? (
         <p>{error}</p>
       ) : (
@@ -45,13 +45,17 @@ const ProductScreen = ({ history, match }) => {
                 <img src={product.image}></img>
               </div>
               <div className="Product_Breif">
-                <p className="Product_Name">{product.name}</p>
+                <p className="Product_Name">
+                  {product.name}
+
+                  <span style={{  marginLeft:"210px", fontSize:"16px" }}>
+                    {product.rating}{' '}
+                    <i style={{ color: 'yellow',  }} className="fas fa-star"></i>
+                  </span>
+                </p>
                 <p className="Product_Description">{product.description}</p>
                 <div className="Product_SubDetails">
-                  <p>
-                    {product.rating}{' '}
-                    <i style={{ color: 'yellow' }} className="fas fa-star"></i>
-                  </p>
+                 
 
                   <p>
                     {product.countInStock > 0 ? (
@@ -95,30 +99,28 @@ const ProductScreen = ({ history, match }) => {
                       {product.price}
                     </span>
                   </p>
+                  <p>{product.description2}</p>
                   <p>
-                   {product.description2}
-                  </p>
-                  <p>
-                  <i
+                    <i
                       style={{ color: 'white', marginRight: '10px' }}
                       className="fas fa-check"
                     ></i>
-                   
-                   {  product.keypoints && <span>{product.keypoints.a}</span>}
+
+                    {product.keypoints && <span>{product.keypoints.a}</span>}
                   </p>
                   <p>
                     <i
                       style={{ color: 'white', marginRight: '10px' }}
                       className="fas fa-check"
                     ></i>
-                   {  product.keypoints && <span>{product.keypoints.b}</span>}
+                    {product.keypoints && <span>{product.keypoints.b}</span>}
                   </p>
                   <p>
                     <i
                       style={{ color: 'white', marginRight: '10px' }}
                       className="fas fa-check"
                     ></i>
-                      {  product.keypoints && <span>{product.keypoints.c}</span>}
+                    {product.keypoints && <span>{product.keypoints.c}</span>}
                   </p>
                   <div className="Product_SubDetails">
                     {/* <p>Price: {product.price}</p>
@@ -137,6 +139,14 @@ const ProductScreen = ({ history, match }) => {
           </div>
         </>
       )}
+      <div className="Bottom_btn">
+        <button
+          onClick={addToCartHandler}
+          disabled={product.countInStock === 0}
+        >
+          <p>Add to Cart</p>
+        </button>
+      </div>
     </div>
   )
 }
