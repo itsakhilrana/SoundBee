@@ -22,7 +22,7 @@ const Header = ({history}) => {
       <div className="Navbar">
         <div className="Navbar_L">
           <Link to="/" className="Title">
-           <img src={logo} width="22px" ></img> SoundBee
+           <img src={logo} width="20px" ></img> SoundBee
           </Link>
         </div>
         <div className="Navbar_R">

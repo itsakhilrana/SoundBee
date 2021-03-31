@@ -11,7 +11,7 @@
   top: 0;
   box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.25);
   color: white;
-  letter-spacing: 00.6px;
+  letter-spacing: 0.6px;
 }
 
 .Title {
@@ -115,8 +115,8 @@ li {
 @media only screen and (max-width: 414px) { 
 
   .Title {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     color: white;
     text-decoration: none;
     letter-spacing: 0.6px;
