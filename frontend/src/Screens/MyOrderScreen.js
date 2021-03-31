@@ -83,7 +83,7 @@ const MyOrderScreen = ({history}) => {
                     </td>
                     <td>
                       <Link className="Links" to={`/order/${order._id}`}>
-                        Details
+                        <p >Details</p>
                       </Link>
                     </td>
                   </tr>

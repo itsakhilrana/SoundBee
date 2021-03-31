@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+letter-spacing: 0.6px;
   color: white;
   font-size: 20px;
 }
@@ -57,7 +57,9 @@ button:focus {
     font-size: 35px;
   }
   .PaymentMethod {
-    font-size: 28px;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.616);
   }
 
   .Payment_Container button {
@@ -66,8 +68,8 @@ button:focus {
     padding: 10px 15px;
     width: 100%;
     color: black;
-    height: 60px;
-    font-weight: 700;
+    height: 50px;
+    font-weight: 500;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -75,6 +77,7 @@ button:focus {
     border: 0;
     text-decoration: none;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 16px;
+    letter-spacing: 0.6px;
   }
 }

@@ -74,9 +74,11 @@ const PlaceorderScreen = ({ history }) => {
 
   return (
     <div className="PlaceorderScreen">
-     
+      
      <div className="PlaceOrder_Container">
+    
      <div className="Order_Items">
+     <p className="Cart_Summar">Cart Summary</p>
         {/* <div className="ShippingPlace">
           <p className="Shipping_Address">Shipping Address</p>
 
@@ -143,7 +145,7 @@ const PlaceorderScreen = ({ history }) => {
         </div>
       </div>
       <div className="Cart_SummaryMob">
-        <p className="Cart_Summar">Cart Summary</p>
+       
         <div className="row">
           <div className="col1">
           <p>PaymentMethod</p>
@@ -170,7 +172,7 @@ const PlaceorderScreen = ({ history }) => {
       </div>
 
       <div className="Cart_Summary">
-        <p className="Cart_Summar">Cart Summary</p>
+        
         <div className="row">
           <div className="col1">
             <p>Item price</p>
@@ -195,7 +197,7 @@ const PlaceorderScreen = ({ history }) => {
      </div>
       <div className='Bottom_btn'>
         <button onClick={placeOrderHandler}><p>Place Your Order</p>
-        <p>${cart.totalPrice}</p></button>
+        <p>$<span style={{fontSize:"22px", fontWeight:"700", marginLeft:"2px"}}>{cart.totalPrice}</span></p></button>
       </div>
     </div>
   )

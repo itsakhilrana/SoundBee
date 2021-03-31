@@ -27,7 +27,8 @@ const AddressScreen = ({ history }) => {
       <div className="AddressScreen">
         
         <form onSubmit={addressHandler}>
-        <p>Address & PaymentMethod</p>
+        <p className="AddresPay">Address & PaymentMethod</p>
+        
           <div>
             <label>Address</label>
             <input

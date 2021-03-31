@@ -5,6 +5,7 @@
   font-size: 35px;
   display: flex;
   justify-content: space-evenly;
+  letter-spacing: 0.6px;
 }
 
 .CartItem_Container {
@@ -14,10 +15,15 @@
   grid-column-gap: 20px;
   height: 0;
 }
-
+.Cart_Order{
+  font-size: 20px;
+   font-weight: 500;
+   color: rgba(255, 255, 255, 0.616);
+}
 .Flex{
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 
 .Cart_Card {
@@ -96,7 +102,7 @@
   .CartScreen {
     height: 100vh;
     padding: 0px;
-    padding-top: 135px;
+    padding-top: 100px;
     color: white;
     font-size: 35px;
     display: flex;

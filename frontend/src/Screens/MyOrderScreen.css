@@ -51,7 +51,7 @@ table, th, td {
     
     height: 100%;
     display: inline-block;
-    padding: 100px 15px 0px 15px;
+    padding: 100px 25px 0px 25px;
   
     color: white;
    
@@ -70,10 +70,15 @@ table, th, td {
     text-align: left;
     font-weight: 500;
   }
-  td {
+  td  {
       text-align: center;
       font-size: 8px;
   }
+
+  td p  {
+    
+    font-size: 8px;
+}
 
   caption {
       margin-bottom: 30px;

@@ -25,11 +25,13 @@ const CartScreen = ({ history, match, location }) => {
   return (
     <div className="CartScreen">
       <div className="CartScreen_Contianer">
+      <p className="Cart_Order">My Cart</p>
         {cartItems.length === 0 ? (
           'No item in your cart.'
         ) : (
           <div className="Flex">
             <div className="CartItem_Container">
+            
               {cartItems.map((product) => {
                 return (
                   <div>

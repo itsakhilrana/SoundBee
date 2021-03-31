@@ -14,6 +14,7 @@
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     height: 220px;
+    margin-top: 20px;
   }
   
   .orderCart_Card {
@@ -75,13 +76,14 @@
   }
 
   .Place_Order{
-    font-size: 24px;
+    font-size: 20px;
    font-weight: 500;
+   color: rgba(255, 255, 255, 0.616);
   }
   .row {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   
   .col1 {
@@ -194,7 +196,7 @@
       border: none;
       height: 100%;
       width: 100%;
-      margin-top: 40px;
+      margin-top: 0px;
     }
 
     .orderQty {
