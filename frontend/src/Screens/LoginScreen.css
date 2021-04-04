@@ -90,3 +90,156 @@ select:focus {
     margin-top: 40px;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  
+  .Login_Screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-top: 20px;
+  }
+  
+  .LoginScreen_Container {
+    display: inline-block;
+  }
+
+  .Brand_Title {
+    font-size: 62px;
+    font-weight: 700;
+  }
+  
+  .Punch_Line {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .LoginScreen_R {
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+
+
+  .Form input {
+    color: white;
+    width: 360px;
+  
+    padding: 5px 0px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+  
+    letter-spacing: 1px;
+  }
+  
+  .Form button {
+    margin-top: 15px;
+    height: 40px;
+    width: 360px;
+    font-weight: 700;
+  
+    letter-spacing: 1px;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
+  
+  .Form button:hover {
+    border: none;
+    background-color: rgb(204, 197, 197);
+    outline: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .New_User {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.377);
+    margin-top: 30px;
+  }
+  
+}
+
+
+@media only screen and (max-width: 360px) {
+  
+  .Login_Screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-top: 20px;
+  }
+  
+  .LoginScreen_Container {
+    display: inline-block;
+  }
+
+  .Brand_Title {
+    font-size: 62px;
+    font-weight: 700;
+  }
+  
+  .Punch_Line {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .LoginScreen_R {
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+
+
+  .Form input {
+    color: white;
+    width: 340px;
+  
+    padding: 5px 0px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+  
+    letter-spacing: 1px;
+  }
+  
+  .Form button {
+    margin-top: 15px;
+    height: 40px;
+    width: 340px;
+    font-weight: 700;
+  
+    letter-spacing: 1px;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
+  
+  .Form button:hover {
+    border: none;
+    background-color: rgb(204, 197, 197);
+    outline: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .New_User {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.377);
+    margin-top: 30px;
+  }
+  
+}

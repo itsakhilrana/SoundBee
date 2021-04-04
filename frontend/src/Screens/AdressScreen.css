@@ -123,3 +123,25 @@
   }
 
 }
+
+@media only screen and (max-width: 375px) {
+
+  .AddressScreen {
+    margin-top: 50px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 50px;
+  }
+
+  
+  .AddressScreen form {
+    width: 335px;
+    margin: 0 auto;
+  }
+
+}

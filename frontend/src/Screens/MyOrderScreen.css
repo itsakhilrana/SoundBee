@@ -86,3 +86,47 @@ table, th, td {
       font-weight: 500;
   }
   }
+
+
+
+  @media only screen and (max-width: 375px) {
+    .MyOrder_Screen{
+    
+      height: 100%;
+      display: inline-block;
+      padding: 100px 5px 0px 5px;
+    
+      color: white;
+     
+      justify-content: none;
+  }
+  
+  
+  table, th, td {
+      border: 1px solid rgb(61, 61, 61);
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+    }
+    th {
+      text-align: left;
+      font-weight: 500;
+    }
+    td  {
+        text-align: center;
+        font-size: 7px;
+    }
+  
+    td p  {
+      
+      font-size: 7px;
+  }
+  
+    caption {
+        margin-bottom: 30px;
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+  }

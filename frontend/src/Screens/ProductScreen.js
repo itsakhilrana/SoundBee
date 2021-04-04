@@ -48,7 +48,7 @@ const ProductScreen = ({ history, match }) => {
                 <p className="Product_Name">
                   {product.name}
 
-                  <span style={{  marginLeft:"210px", fontSize:"16px" }}>
+                  <span >
                     {product.rating}{' '}
                     <i style={{ color: 'yellow',  }} className="fas fa-star"></i>
                   </span>
@@ -139,7 +139,7 @@ const ProductScreen = ({ history, match }) => {
           </div>
         </>
       )}
-      <div className="Bottom_btn">
+      <div className="Bottom_btnp">
         <button
           onClick={addToCartHandler}
           disabled={product.countInStock === 0}

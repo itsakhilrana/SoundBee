@@ -336,3 +336,172 @@
   }
   
 }
+
+@media only screen and (max-width: 375px) {
+  .HomeScreen {
+    margin-top: 0px;
+    height: 100vh;
+    width: 100%;
+    padding-top: 60px;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+
+  .Product_Container {
+    display: inline-block;
+  }
+
+  .Products {
+    width: 100%;
+    color: white;
+    padding-top: 0px;
+  }
+
+  .Products_Scroll {
+    width: 365px;
+    margin-top: 30px;
+    height: 200px;
+  }
+
+  .Products_Scroll2 {
+    width: 365px;
+    margin-top: 85px;
+    height: 190px;
+  }
+
+  .Products_Scroll3 {
+    width: 365px;
+    margin-top: 0px;
+    height: 180px;
+    display: inline-block;
+  }
+
+  .Scroll_container {
+    overflow: auto;
+    height: 250px;
+    display: flex;
+  }
+
+  .Premium_Products {
+    display: none;
+  }
+
+  .Ads {
+    width: 350px;
+  }
+  .Ads_Container p {
+    margin-top: 0px;
+    color: rgba(255, 255, 255, 0.377);
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  .Card {
+    height: 205px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.048);
+    border-radius: 10px;
+    padding: 10px 10px;
+  
+    margin-right: 20px;
+  }
+  
+
+  .Card2 {
+    height: 120px;
+    width: 245px;
+    background-color: rgba(255, 255, 255, 0.048);
+    border-radius: 10px;
+    padding: 10px 10px;
+    display: flex;
+    margin-right: 20px;
+  }
+  
+}
+
+
+@media only screen and (max-width: 360px) {
+  .HomeScreen {
+    margin-top: 0px;
+    height: 100vh;
+    width: 100%;
+    padding-top: 60px;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+
+  .Product_Container {
+    display: inline-block;
+  }
+
+  .Products {
+    width: 100%;
+    color: white;
+    padding-top: 0px;
+  }
+
+  .Products_Scroll {
+    width: 350px;
+    margin-top: 30px;
+    height: 200px;
+  }
+
+  .Products_Scroll2 {
+    width: 350px;
+    margin-top: 85px;
+    height: 190px;
+  }
+
+  .Products_Scroll3 {
+    width: 350px;
+    margin-top: 0px;
+    height: 180px;
+    display: inline-block;
+  }
+
+  .Scroll_container {
+    overflow: auto;
+    height: 250px;
+    display: flex;
+  }
+
+  .Premium_Products {
+    display: none;
+  }
+
+  .Ads {
+    width: 350px;
+  }
+  .Ads_Container p {
+    margin-top: 0px;
+    color: rgba(255, 255, 255, 0.377);
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  .Card {
+    height: 205px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.048);
+    border-radius: 10px;
+    padding: 10px 10px;
+  
+    margin-right: 20px;
+  }
+  
+
+  .Card2 {
+    height: 120px;
+    width: 245px;
+    background-color: rgba(255, 255, 255, 0.048);
+    border-radius: 10px;
+    padding: 10px 10px;
+    display: flex;
+    margin-right: 20px;
+  }
+  
+}
+
+

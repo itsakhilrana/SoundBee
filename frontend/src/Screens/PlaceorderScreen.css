@@ -290,3 +290,118 @@ button:focus {
  
  
 }
+
+@media only screen and (max-width: 375px) {
+
+
+  
+  .PlaceorderScreen {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    padding-bottom: 100px;
+  }
+  
+  .PlaceOrder_Container{
+    display: inline-block;
+    padding: 80px 0px 0px 0px;
+  
+    color: white;
+    font-size: 35px;
+    justify-content: space-around;
+  }
+  .CartItem_ContainerPlaceOrder {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    height: 100%;
+  }
+
+  .Cart_Summary {
+    display: none;
+    
+  }
+
+  .Cart_SummaryMob{
+    display: inline-block;
+    margin-top: 30px;
+  }
+
+  .Cart_Card {
+    display: flex;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.048);
+    width: 335px;
+    height: 105px;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 335px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .col1 {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .PlaceorderScreen .col2 {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    text-align: end;
+  }
+  
+  .row p {
+    margin-bottom: 8px;
+  }
+  
+
+  .qty {
+    margin-left: 90px;
+    font-size: 14px;
+  }
+  
+  .About_Product {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    margin-top: 5px;
+  }
+  
+  .price {
+    margin-top: 5px;
+  }
+  
+  .removeItem {
+    margin-left: 150px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 10px;
+    width: 80px;
+  
+    background-color: rgba(255, 255, 255, 0.548);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .Bottom_btn{
+    display: block;
+    position: fixed;
+   bottom: 0;
+ margin-bottom: 20px;
+    width: 335px;
+  }
+}

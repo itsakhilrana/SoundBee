@@ -98,6 +98,39 @@
   }
 
 
+  .Bottom_btnp{
+    display: block;
+    position: fixed;
+   bottom: 0;
+ margin-bottom: 20px;
+    width: 365px;
+  }
+
+  .Bottom_btnp button {
+    background-color: rgba(255, 255, 255, 0.815);
+    border: 0;
+    padding: 10px 15px;
+    width: 100%;
+    color: black;
+    height: 50px;
+    font-weight: 500;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+   
+    border: 0;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+  }
+
+  .Product_Name span {
+      margin-left: 210px;
+      font-size: 16px;
+  }
+
+
 
   @media only screen and (max-width: 414px) {
   
@@ -105,8 +138,8 @@
         height: 100%;
         width: 100%;
         padding-top: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 15px;
+        padding-right: 0px;
         padding-bottom: 100px;
         padding-top: 65px;
     }
@@ -166,6 +199,174 @@
         background: rgb(235, 29, 29);
     }
     
+    
+
+}
+
+
+@media only screen and (max-width: 375px) {
+
+    .Product_Screen{
+        height: 100%;
+        width: 100%;
+        padding-top: 0px;
+        padding-left: 15px;
+        padding-right: 0px;
+        padding-bottom: 100px;
+        padding-top: 65px;
+    }
+    
+    .Product_Screen {
+        color: white;
+    }
+    
+    
+    .ProductScreen_Container{
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Product_Detail{
+        display: inline-block;
+    }
+
+
+    .Product_Img img{
+        width: 330px;
+        height: auto;
+    }
+
+    .Product_Name span {
+        margin-left: 160px;
+        font-size: 16px;
+    }
+    
+    .Product_Breif{
+        padding: 0px 0px;
+        margin-left: 0px;
+        width: 330px;
+        margin-top: 20px;
+        /* background-color: tomato; */
+        letter-spacing: 0.6px;
+        
+    }
+
+    .Back_btn{
+        margin: 0px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 60px;
+        background-color: rgba(255, 255, 255, 0.397);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        cursor: pointer;
+    
+    }
+
+    .AddToCart_btn{
+        display: none;
+    }
+
+
+    button:disabled {
+        background: rgb(235, 29, 29);
+    }
+
+    .Bottom_btnp{
+        display: block;
+        position: fixed;
+       bottom: 0;
+     margin-bottom: 20px;
+        width: 330px;
+      }
+    
+    
+
+}
+
+@media only screen and (max-width: 360px) {
+
+    .Product_Screen{
+        height: 100%;
+        width: 100%;
+        padding-top: 0px;
+        padding-left: 15px;
+        padding-right: 0px;
+        padding-bottom: 100px;
+        padding-top: 65px;
+    }
+    
+    .Product_Screen {
+        color: white;
+    }
+    
+    
+    .ProductScreen_Container{
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Product_Detail{
+        display: inline-block;
+    }
+
+
+    .Product_Img img{
+        width: 310px;
+        height: auto;
+    }
+
+    .Product_Name span {
+        margin-left: 140px;
+        font-size: 16px;
+    }
+    
+    .Product_Breif{
+        padding: 0px 0px;
+        margin-left: 0px;
+        width: 310px;
+        margin-top: 20px;
+        /* background-color: tomato; */
+        letter-spacing: 0.6px;
+        
+    }
+
+    .Back_btn{
+        margin: 0px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 60px;
+        background-color: rgba(255, 255, 255, 0.397);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        cursor: pointer;
+    
+    }
+
+    .AddToCart_btn{
+        display: none;
+    }
+
+
+    button:disabled {
+        background: rgb(235, 29, 29);
+    }
+
+    .Bottom_btnp{
+        display: block;
+        position: fixed;
+       bottom: 0;
+     margin-bottom: 20px;
+        width: 310px;
+      }
     
 
 }
