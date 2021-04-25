@@ -29,23 +29,9 @@ app.use(productRoutes)
 
 
 
-const ping = () =>
-  request(
-    'https://soundbee.herokuapp.com/',
-    (error, response, body) => {
-      console.log('ping started')
-    }
-  )
-setInterval(ping, 1200000)
 
-// const ping2 = () =>
-//   request(
-//     'https://resumetomars.herokuapp.com/',
-//     (error, response, body) => {
-//       console.log('ping started')
-//     }
-//   )
-//   setInterval(ping2, 1100000)
+
+
 
 
 const __dirname = path.resolve() 
