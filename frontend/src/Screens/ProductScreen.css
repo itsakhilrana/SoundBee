@@ -276,8 +276,8 @@
         background: rgb(235, 29, 29);
     }
 
-    .Bottom_btnp{
-        display: block;
+    .Bottom_btn{
+        display: none;
         position: fixed;
        bottom: 0;
      margin-bottom: 20px;
@@ -360,8 +360,8 @@
         background: rgb(235, 29, 29);
     }
 
-    .Bottom_btnp{
-        display: block;
+    .Bottom_btn{
+        display: inline-block;
         position: fixed;
        bottom: 0;
      margin-bottom: 20px;

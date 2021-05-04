@@ -61,7 +61,7 @@ const ProductScreen = ({ history, match }) => {
                     {product.countInStock > 0 ? (
                       <p
                         className="InStock"
-                        style={{ color: 'rgb(142, 233, 56)' }}
+                        style={{ color: 'rgb(142, 233, 56)', marginBottom:'5px' }}
                       >
                         In Stock
                       </p>
@@ -139,7 +139,7 @@ const ProductScreen = ({ history, match }) => {
           </div>
         </>
       )}
-      <div className="Bottom_btnp">
+      <div className="Bottom_btn">
         <button
           onClick={addToCartHandler}
           disabled={product.countInStock === 0}
