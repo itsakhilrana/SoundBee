@@ -27,21 +27,20 @@ app.use(userRoutes)
 import productRoutes from './routes/productRoute.js'
 app.use(productRoutes)
 
-
-
-
-
-
-
-
 const __dirname = path.resolve() 
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('frontend/build'))
-  
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
-  })
+  app.use(express.static(path.join(__dirname, "./frontend/build")));
+
+  app.get("*", function (_, res) {
+    res.sendFile(
+      path.join(__dirname, "./frontend/build/index.html"),
+      function (err) {
+        res.status(500).send(err);
+      }
+    );
+  });
+
 } else {
   // Server Testing
   app.use('/test', (req, res) => {
